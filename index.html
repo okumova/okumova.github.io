@@ -774,7 +774,7 @@
     <p>I'm a vaccine scientist and science policy professional working at the intersection of immunology and public health decision-making. I currently serve as a Program Officer at the National Academies of Sciences, Engineering, and Medicine, where I lead expert consensus studies on vaccine safety for federal agencies including the CDC, FDA, VA, and DoD.</p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <div class="stat-num">15+</div>
+        <div class="stat-num">15</div>
         <div class="stat-label">Peer-Reviewed Publications</div>
       </div>
       <div class="hero-stat">
@@ -1295,22 +1295,22 @@
     <div class="section-title">Contact</div>
     <div class="section-divider"></div>
     <p>I'm always happy to connect with colleagues, collaborators, and anyone interested in vaccine science, immunology, or science policy. I welcome conversations about collaboration, shared interests, and new directions.</p>
-    <form class="contact-form" data-formspree-id="maqreoly">
+    <form class="contact-form" id="contact-form">
       <div>
-        <input type="text" name="name" data-fs-field="name" placeholder="Your Name" required>
-        <span data-fs-error="name" style="display:none;color:#c0392b;font-size:0.82rem;margin-top:4px;display:block;"></span>
+        <input type="text" name="name" id="cf-name" placeholder="Your Name" required>
+        <span id="cf-err-name" style="display:none;color:#c0392b;font-size:0.82rem;margin-top:4px;"></span>
       </div>
       <div>
-        <input type="email" name="email" data-fs-field="email" placeholder="Your Email" required>
-        <span data-fs-error="email" style="display:none;color:#c0392b;font-size:0.82rem;margin-top:4px;display:block;"></span>
+        <input type="email" name="email" id="cf-email" placeholder="Your Email" required>
+        <span id="cf-err-email" style="display:none;color:#c0392b;font-size:0.82rem;margin-top:4px;"></span>
       </div>
       <div>
-        <textarea name="message" data-fs-field="message" placeholder="Your Message" required></textarea>
-        <span data-fs-error="message" style="display:none;color:#c0392b;font-size:0.82rem;margin-top:4px;display:block;"></span>
+        <textarea name="message" id="cf-message" placeholder="Your Message" required></textarea>
+        <span id="cf-err-msg" style="display:none;color:#c0392b;font-size:0.82rem;margin-top:4px;"></span>
       </div>
-      <div data-fs-error="global" style="display:none;color:#c0392b;font-size:0.85rem;margin-bottom:8px;"></div>
-      <button type="submit" data-fs-submit-btn>Send Message</button>
-      <div data-fs-success style="display:none;background:#eaf6f0;border:1px solid #a8d8c2;border-radius:8px;padding:18px 22px;margin-top:18px;color:#1a5c3a;font-size:0.95rem;text-align:center;">
+      <div id="cf-err-global" style="display:none;color:#c0392b;font-size:0.85rem;margin-bottom:8px;"></div>
+      <button type="submit" id="cf-submit">Send Message</button>
+      <div id="cf-success" style="display:none;background:#eaf6f0;border:1px solid #a8d8c2;border-radius:8px;padding:18px 22px;margin-top:18px;color:#1a5c3a;font-size:0.95rem;text-align:center;">
         Thanks for reaching out — I'll be in touch soon.
       </div>
     </form>
@@ -1327,64 +1327,50 @@
 </footer>
 
 
-<script src="https://unpkg.com/@formspree/ajax@1/dist/formspree-ajax.js"></script>
 <script>
 (function () {
-  var form = document.querySelector('.contact-form[data-formspree-id]');
-  if (!form) return;
-  var formId = form.getAttribute('data-formspree-id');
-  var submitBtn = form.querySelector('[data-fs-submit-btn]');
-  var successDiv = form.querySelector('[data-fs-success]');
-  var globalErr = form.querySelector('[data-fs-error="global"]');
+  var form     = document.getElementById('contact-form');
+  var btn      = document.getElementById('cf-submit');
+  var success  = document.getElementById('cf-success');
+  var errGlobal= document.getElementById('cf-err-global');
 
-  function clearErrors() {
-    form.querySelectorAll('[data-fs-error]').forEach(function(el) {
-      el.style.display = 'none';
-      el.textContent = '';
-    });
+  function reset() {
+    btn.disabled = false;
+    btn.textContent = 'Send Message';
+    errGlobal.style.display = 'none';
+    errGlobal.textContent = '';
   }
 
-  function showFieldError(field, msg) {
-    var el = form.querySelector('[data-fs-error="' + field + '"]');
-    if (el) { el.textContent = msg; el.style.display = 'block'; }
-  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    errGlobal.style.display = 'none';
 
-  form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    clearErrors();
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending…';
-
-    var client = formspree.createClient();
-    client.submitForm(formId, new FormData(form)).then(function (result) {
-      var err = result[0];
-      if (err) {
-        // field-level or global errors
-        if (err.getFormErrors) {
-          err.getFormErrors().forEach(function (e) {
-            if (globalErr) { globalErr.textContent = e.message; globalErr.style.display = 'block'; }
-          });
-        }
-        if (err.getAllFieldErrors) {
-          err.getAllFieldErrors().forEach(function (e) {
-            showFieldError(e.field, e.message);
-          });
-        }
-        if (!err.getFormErrors && !err.getAllFieldErrors) {
-          if (globalErr) { globalErr.textContent = 'Something went wrong. Please try again.'; globalErr.style.display = 'block'; }
-        }
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
+    fetch('https://formspree.io/f/maqreoly', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+    .then(function (res) {
+      if (res.ok) {
+        form.reset();
+        success.style.display = 'block';
+        btn.style.display = 'none';
       } else {
-        // success
-        form.querySelectorAll('input, textarea').forEach(function(el) { el.value = ''; });
-        successDiv.style.display = 'block';
-        submitBtn.style.display = 'none';
+        return res.json().then(function (data) {
+          var msg = (data.errors && data.errors.map(function(x){return x.message;}).join(' ')) ||
+                    'Something went wrong. Please try again.';
+          errGlobal.textContent = msg;
+          errGlobal.style.display = 'block';
+          reset();
+        });
       }
-    }).catch(function () {
-      if (globalErr) { globalErr.textContent = 'Network error. Please try again.'; globalErr.style.display = 'block'; }
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Send Message';
+    })
+    .catch(function () {
+      errGlobal.textContent = 'Network error — please try again.';
+      errGlobal.style.display = 'block';
+      reset();
     });
   });
 })();
