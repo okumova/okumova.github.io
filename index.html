@@ -1295,11 +1295,24 @@
     <div class="section-title">Contact</div>
     <div class="section-divider"></div>
     <p>I'm always happy to connect with colleagues, collaborators, and anyone interested in vaccine science, immunology, or science policy. I welcome conversations about collaboration, shared interests, and new directions.</p>
-    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <form class="contact-form" data-formspree-id="maqreoly">
+      <div>
+        <input type="text" name="name" data-fs-field="name" placeholder="Your Name" required>
+        <span data-fs-error="name" style="display:none;color:#c0392b;font-size:0.82rem;margin-top:4px;display:block;"></span>
+      </div>
+      <div>
+        <input type="email" name="email" data-fs-field="email" placeholder="Your Email" required>
+        <span data-fs-error="email" style="display:none;color:#c0392b;font-size:0.82rem;margin-top:4px;display:block;"></span>
+      </div>
+      <div>
+        <textarea name="message" data-fs-field="message" placeholder="Your Message" required></textarea>
+        <span data-fs-error="message" style="display:none;color:#c0392b;font-size:0.82rem;margin-top:4px;display:block;"></span>
+      </div>
+      <div data-fs-error="global" style="display:none;color:#c0392b;font-size:0.85rem;margin-bottom:8px;"></div>
+      <button type="submit" data-fs-submit-btn>Send Message</button>
+      <div data-fs-success style="display:none;background:#eaf6f0;border:1px solid #a8d8c2;border-radius:8px;padding:18px 22px;margin-top:18px;color:#1a5c3a;font-size:0.95rem;text-align:center;">
+        Thanks for reaching out — I'll be in touch soon.
+      </div>
     </form>
     <a href="https://www.linkedin.com/in/ogankumova/" target="_blank" class="contact-linkedin">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -1313,5 +1326,68 @@
   <p>© 2026 Ogan K. Kumova, PhD &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/ogankumova/" target="_blank">LinkedIn</a> &nbsp;·&nbsp; <a href="https://orcid.org/0000-0001-8455-8850" target="_blank">ORCID</a></p>
 </footer>
 
+
+<script src="https://unpkg.com/@formspree/ajax@1/dist/formspree-ajax.js"></script>
+<script>
+(function () {
+  var form = document.querySelector('.contact-form[data-formspree-id]');
+  if (!form) return;
+  var formId = form.getAttribute('data-formspree-id');
+  var submitBtn = form.querySelector('[data-fs-submit-btn]');
+  var successDiv = form.querySelector('[data-fs-success]');
+  var globalErr = form.querySelector('[data-fs-error="global"]');
+
+  function clearErrors() {
+    form.querySelectorAll('[data-fs-error]').forEach(function(el) {
+      el.style.display = 'none';
+      el.textContent = '';
+    });
+  }
+
+  function showFieldError(field, msg) {
+    var el = form.querySelector('[data-fs-error="' + field + '"]');
+    if (el) { el.textContent = msg; el.style.display = 'block'; }
+  }
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    clearErrors();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    var client = formspree.createClient();
+    client.submitForm(formId, new FormData(form)).then(function (result) {
+      var err = result[0];
+      if (err) {
+        // field-level or global errors
+        if (err.getFormErrors) {
+          err.getFormErrors().forEach(function (e) {
+            if (globalErr) { globalErr.textContent = e.message; globalErr.style.display = 'block'; }
+          });
+        }
+        if (err.getAllFieldErrors) {
+          err.getAllFieldErrors().forEach(function (e) {
+            showFieldError(e.field, e.message);
+          });
+        }
+        if (!err.getFormErrors && !err.getAllFieldErrors) {
+          if (globalErr) { globalErr.textContent = 'Something went wrong. Please try again.'; globalErr.style.display = 'block'; }
+        }
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      } else {
+        // success
+        form.querySelectorAll('input, textarea').forEach(function(el) { el.value = ''; });
+        successDiv.style.display = 'block';
+        submitBtn.style.display = 'none';
+      }
+    }).catch(function () {
+      if (globalErr) { globalErr.textContent = 'Network error. Please try again.'; globalErr.style.display = 'block'; }
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
+    });
+  });
+})();
+</script>
 </body>
 </html>
