@@ -169,6 +169,7 @@
     background: var(--gold);
     color: var(--navy-dark);
     font-weight: 700;
+    border: 2px solid var(--gold);
   }
 
   .btn-primary:hover { background: #d4b560; }
@@ -470,6 +471,49 @@
     color: var(--text-light);
   }
 
+  /* RESEARCH THEMES */
+  .research-themes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 52px;
+  }
+
+  .theme-card {
+    border-top: 3px solid var(--gold);
+    padding: 24px 22px;
+    background: var(--white);
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    border-radius: 0 0 4px 4px;
+  }
+
+  .theme-card .theme-label {
+    font-family: Arial, sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .theme-card h4 {
+    font-size: 1rem;
+    color: var(--navy);
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    font-family: Arial, sans-serif;
+  }
+
+  .theme-card p {
+    font-size: 0.88rem;
+    color: var(--text-light);
+    line-height: 1.65;
+  }
+
   /* PUBLICATIONS */
   .pub-header-row {
     display: flex;
@@ -557,11 +601,36 @@
   .pub-link.pdf { border-color: var(--gold); color: var(--gold); }
   .pub-link.pdf:hover { background: var(--gold); color: var(--navy-dark); }
 
+  /* Publication topic tags */
+  .pub-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+  }
+  .pub-tag {
+    font-family: Arial, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: var(--navy);
+    background: var(--off-white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3px 10px;
+    white-space: nowrap;
+  }
+
   /* CV */
   .cv-section {
     text-align: center;
     padding: 90px 80px;
     background: var(--navy) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 420px;
   }
 
   .cv-section .section-label { color: var(--gold); }
@@ -709,24 +778,12 @@
         <div class="stat-label">Peer-Reviewed Publications</div>
       </div>
       <div class="hero-stat">
-        <div class="stat-num">2</div>
-        <div class="stat-label">NASEM Reports</div>
-      </div>
-      <div class="hero-stat">
         <div class="stat-num">20+</div>
         <div class="stat-label">Years in Science</div>
       </div>
       <div class="hero-stat">
         <div class="stat-num">20+</div>
         <div class="stat-label">Years in Education</div>
-      </div>
-      <div class="hero-stat">
-        <div class="stat-num">4</div>
-        <div class="stat-label">Federal Agency Partners</div>
-      </div>
-      <div class="hero-stat">
-        <div class="stat-num">6</div>
-        <div class="stat-label">Research Focus Areas</div>
       </div>
     </div>
     <div class="hero-buttons">
@@ -760,7 +817,7 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="#a6ce39"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 3.872-2.412 3.872-3.722 0-2.016-1.284-3.722-3.872-3.722h-2.297z"/></svg>
           ORCID
         </a>
-        <a href="https://pubmed.ncbi.nlm.nih.gov/?term=ogan%20kumova" target="_blank" class="sidebar-link">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Kumova%20O&cauthor_id=42089286" target="_blank" class="sidebar-link">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           PubMed
         </a>
@@ -826,24 +883,24 @@
   <p class="policy-intro">As a Program Officer at the <a href="https://www.nationalacademies.org" target="_blank" style="color:var(--navy);font-weight:600;">National Academies of Sciences, Engineering, and Medicine</a>, I work within the <a href="https://www.nationalacademies.org/units/CHPP-BHS-25-P-704" target="_blank" style="color:var(--navy);font-weight:600;">Biomedical and Health Sciences Program Area (BHS)</a> of the <a href="https://www.nationalacademies.org/units/CHPP-CHPP%20EO-25-P-703" target="_blank" style="color:var(--navy);font-weight:600;">Center for Health, People, and Places (CHPP)</a>, where I bring expertise in immunology and vaccine science to support expert consensus studies on vaccine safety, safety monitoring systems, and military and veteran health commissioned by federal agencies including the CDC, VA, DoD, and FDA. This work bridges the gap between scientific evidence and public health decision-making at the highest levels of government.</p>
 
   <div class="report-card">
-    <div class="report-year">2024</div>
-    <div class="report-info">
-      <h3>Evidence Review of the Adverse Effects of COVID-19 Vaccination and Intramuscular Vaccine Administration</h3>
-      <p>A comprehensive evidence review examining adverse effects associated with COVID-19 vaccines and intramuscular vaccine administration, produced for federal health agencies to inform vaccine safety monitoring and policy.</p>
-      <a href="https://nap.nationalacademies.org/catalog/27746/evidence-review-of-the-adverse-effects-of-covid-19-vaccination-and-intramuscular-vaccine-administration" target="_blank" class="report-link">View Full Report &rarr;</a>
-      <div style="display:flex;gap:14px;margin-top:12px;flex-wrap:wrap;">
-        <a href="https://nap.nationalacademies.org/resource/27746/interactive/adverse-effects-of-the-covid-19-vaccine/" target="_blank" class="report-link" style="font-size:0.78rem;">Interactive: COVID-19 Vaccine Adverse Effects &rarr;</a>
-        <a href="https://nap.nationalacademies.org/resource/27746/interactive/shoulder-injuries-from-intramuscular-administration-of-vaccines/" target="_blank" class="report-link" style="font-size:0.78rem;">Interactive: Shoulder Injuries &rarr;</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="report-card">
     <div class="report-year">2025</div>
     <div class="report-info">
       <h3>Vaccine Risk Monitoring and Evaluation at the Centers for Disease Control and Prevention</h3>
       <p>An in-depth evaluation of the CDC's vaccine safety monitoring systems and infrastructure, assessing current practices and providing recommendations to strengthen national vaccine risk surveillance.</p>
       <a href="https://nap.nationalacademies.org/catalog/29240/vaccine-risk-monitoring-and-evaluation-at-the-centers-for-disease-control-and-prevention" target="_blank" class="report-link">View Report &rarr;</a>
+    </div>
+  </div>
+
+  <div class="report-card">
+    <div class="report-year">2024</div>
+    <div class="report-info">
+      <h3>Evidence Review of the Adverse Effects of COVID-19 Vaccination and Intramuscular Vaccine Administration</h3>
+      <p>A comprehensive evidence review examining adverse effects associated with COVID-19 vaccines and intramuscular vaccine administration, produced for federal health agencies to inform vaccine safety monitoring and policy.</p>
+      <a href="https://nap.nationalacademies.org/catalog/27746/evidence-review-of-the-adverse-effects-of-covid-19-vaccination-and-intramuscular-vaccine-administration" target="_blank" class="report-link">View Report &rarr;</a>
+      <div style="display:flex;gap:14px;margin-top:12px;flex-wrap:wrap;">
+        <a href="https://nap.nationalacademies.org/resource/27746/interactive/adverse-effects-of-the-covid-19-vaccine/" target="_blank" class="report-link" style="font-size:0.78rem;">Interactive: COVID-19 Vaccine Adverse Effects &rarr;</a>
+        <a href="https://nap.nationalacademies.org/resource/27746/interactive/shoulder-injuries-from-intramuscular-administration-of-vaccines/" target="_blank" class="report-link" style="font-size:0.78rem;">Interactive: Shoulder Injuries &rarr;</a>
+      </div>
     </div>
   </div>
 
@@ -860,7 +917,7 @@
   </div>
 
   <div style="margin-top:28px;">
-    <div class="section-label" style="margin-bottom:16px;">Current Projects</div>
+    <div class="section-label" style="margin-bottom:16px;">Current &amp; Ongoing Projects</div>
   </div>
 
   <div class="report-card">
@@ -889,9 +946,9 @@
   <div class="section-divider"></div>
   <div class="teaching-grid">
     <div class="teaching-text">
-      <p>Teaching has been part of my life since long before I was formally a teacher. It started at the Franklin Institute in Philadelphia, where I began as a high school volunteer and eventually developed educational programming and curriculum for public audiences and summer camps. That experience taught me something I still carry into every classroom: if a concept isn't landing, you find another way in.</p>
-      <p>I teach science as a process of discovery rather than a collection of facts to memorize. In my classroom, I want students to understand not only what is happening, but why — and how they can work through it themselves. I rely on guided discussion, Socratic questioning, collaborative activities, and real-world case studies. For example, rather than simply telling students that antibiotics don't work on viruses, I ask them to explore how antibiotics work, what they target, and what features different organisms have, so they arrive at that connection themselves.</p>
-      <p>My teaching has spanned a wide range of learners — community college students returning to school after years away, undergraduates entering health professions, graduate and medical students, postdoctoral fellows, and neonatology fellows. At Rowan College at Burlington County, I created the Health and Human Microbiology course for health-profession students and have taught Biology I, Biology II, and Basic Microbiology. At Drexel University College of Medicine and Uniformed Services University, I lecture in microbiology, immunology, molecular pathogenesis, and vaccine development.</p>
+      <p>Teaching has been part of my life since long before I was formally a teacher. It started at the Franklin Institute in Philadelphia, where I volunteered in high school running public science shows and demonstrations. I enjoyed it enough that I eventually came back as a staff member, where I got more deeply involved in curriculum development and educational programming for schools and summer camps. That experience is where I learned two things I still carry into every classroom: that curiosity is contagious, and that good science communication means meeting every kind of learner where they are.</p>
+      <p>I teach science as a process of discovery rather than a collection of facts to memorize. In my classroom, I want students to understand not only what is happening, but why — and how they can work through it themselves. I rely on guided discussion, Socratic questioning, collaborative activities, and real-world case studies. I also deliberately avoid anchoring my courses to a single textbook — drawing instead from primary literature, case studies, and open educational resources. As zero-cost course initiatives like Z-courses and OER adoption become more widespread, I believe removing textbook barriers is one of the most practical ways faculty can support equitable access to education.</p>
+      <p>My teaching has spanned a wide range of learners — community college students returning to school after years away, undergraduates entering health professions, graduate and medical students, postdoctoral fellows, and neonatology fellows. At Rowan College at Burlington County, I run the Health and Human Microbiology course for health-profession students and also teach Biology I, Biology II, and Basic Microbiology. At Drexel University College of Medicine and Uniformed Services University, I lecture in microbiology, immunology, molecular pathogenesis, and vaccine development.</p>
       <p>Good teaching, to me, is not about simplifying material until it loses its depth. It's about presenting it with clarity, structure, and relevance — and making sure students feel supported enough to engage actively with challenging ideas. My goal is for students to leave not just knowing more biology, but better equipped to question, analyze, and think for themselves.</p>
     </div>
     <div class="teaching-roles">
@@ -902,7 +959,7 @@
       </div>
       <div class="role-item">
         <div class="role-title">Health &amp; Human Microbiology / Biology I &amp; II</div>
-        <div class="role-place">Rowan College at Burlington County — Course Creator</div>
+        <div class="role-place">Rowan College at Burlington County</div>
       </div>
       <div class="role-item">
         <div class="role-title">Instructor, Curriculum Designer</div>
@@ -926,14 +983,37 @@
 
 <!-- PUBLICATIONS -->
 <section id="publications">
-  <div class="pub-header-row">
-    <div>
-      <div class="section-label">Peer-Reviewed Work</div>
-      <div class="section-title">Publications</div>
-      <div class="section-divider"></div>
+  <div class="section-label">Peer-Reviewed Work</div>
+  <div class="section-title">Publications</div>
+  <div class="section-divider"></div>
+
+  <div class="research-themes">
+    <div class="theme-card">
+      <div class="theme-label">Research Area</div>
+      <h4>Neonatal Immunology</h4>
+      <p>Defects in neonatal CD8+ T cell responses, respiratory infections, and interventions to improve early immune function.</p>
     </div>
+    <div class="theme-card">
+      <div class="theme-label">Research Area</div>
+      <h4>Vaccinology & Vaccine Development</h4>
+      <p>Vaccine candidates against gonorrhea, HIV, and influenza; adjuvant development; mucosal and systemic immune responses.</p>
+    </div>
+    <div class="theme-card">
+      <div class="theme-label">Research Area</div>
+      <h4>Infectious Disease & Pulmonary Health</h4>
+      <p>Legionella pathogenesis, bronchopulmonary dysplasia, and neonatal respiratory disease.</p>
+    </div>
+    <div class="theme-card">
+      <div class="theme-label">Research Area</div>
+      <h4>Evidence Synthesis & Public Health Policy</h4>
+      <p>Vaccine safety monitoring systems, environmental and military exposures, and veteran health — translating scientific evidence into federal health policy.</p>
+    </div>
+  </div>
+
+  <div class="pub-header-row">
+    <div></div>
     <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
-      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=ogan+kumova" target="_blank" class="orcid-link">
+      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Kumova%20O&cauthor_id=42089286" target="_blank" class="orcid-link">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
         PubMed Profile
       </a>
@@ -945,29 +1025,44 @@
   </div>
 
   <div class="pub-item">
-    <div class="pub-authors">Rao AS, Onufer AP, <strong>Kumova OK</strong>, Roberts LTN, Mossabeb R, Pascasio J, Carey AJ.</div>
+    <div class="pub-authors">Rao AS, Onufer AP, <strong>Kumova O</strong>, Roberts LTN, Mossabeb R, Pascasio J, Carey AJ.</div>
     <div class="pub-title">Myeloid TLR2 signaling amplifies immunopathology in influenza-infected murine neonates.</div>
-    <div class="pub-journal">American Journal of Respiratory Cell and Molecular Biology. In press.</div>
+    <div class="pub-journal">American Journal of Respiratory Cell and Molecular Biology. 2026 Mar 16:aanag050.</div>
     <div class="pub-links">
-      <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Kumova+TLR2+neonates+influenza" target="_blank" class="pub-link">PubMed</a>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/42089286/" target="_blank" class="pub-link">PubMed</a>
+    </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Neonatal Immunity</span>
+      <span class="pub-tag">Influenza</span>
+      <span class="pub-tag">Innate Immunity</span>
     </div>
   </div>
 
   <div class="pub-item">
-    <div class="pub-authors">Matthias KA, Connolly KL, Jerse AE, <strong>Kumova OK</strong>, et al.</div>
+    <div class="pub-authors">Matthias KA, Connolly KL, Jerse AE, <strong>Kumova OK</strong>, Macintyre AN, Gray MC, Thomas KS, Criss AK, Zielke RA, Li L, Sikora AE, Ramirez-Bencomo F, Thistlethwaite A, Derrick JP, Lu WE, Bash MC.</div>
     <div class="pub-title">Evaluation of immunization route in induction of vaccine-mediated anti-gonococcal immune responses in a murine model of ascending infection.</div>
     <div class="pub-journal">Journal of Infectious Diseases. 2025;232(5):e765–e777.</div>
     <div class="pub-links">
       <a href="https://pubmed.ncbi.nlm.nih.gov/40971931/" target="_blank" class="pub-link">PubMed</a>
     </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Vaccinology</span>
+      <span class="pub-tag">Gonorrhea</span>
+      <span class="pub-tag">Mucosal Immunity</span>
+    </div>
   </div>
 
   <div class="pub-item">
-    <div class="pub-authors">Rao AS, Ugwu N, Onufer AP, <strong>Kumova OK</strong>, Carey AJ.</div>
+    <div class="pub-authors">Rao AS, Ugwu N, Onufer AP, <strong>Kumova O</strong>, Carey AJ.</div>
     <div class="pub-title">Cathelicidin-related antimicrobial peptide (CRAMP) is toxic during neonatal murine influenza virus infection.</div>
     <div class="pub-journal">Journal of Immunology. 2025;214(5):1022–1031.</div>
     <div class="pub-links">
       <a href="https://pubmed.ncbi.nlm.nih.gov/40101750/" target="_blank" class="pub-link">PubMed</a>
+    </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Neonatal Immunity</span>
+      <span class="pub-tag">Influenza</span>
+      <span class="pub-tag">Antimicrobial Peptides</span>
     </div>
   </div>
 
@@ -978,6 +1073,11 @@
     <div class="pub-links">
       <a href="https://pubmed.ncbi.nlm.nih.gov/36352099/" target="_blank" class="pub-link">PubMed</a>
     </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Neonatal Immunity</span>
+      <span class="pub-tag">Influenza</span>
+      <span class="pub-tag">Type I Interferon</span>
+    </div>
   </div>
 
   <div class="pub-item">
@@ -987,32 +1087,52 @@
     <div class="pub-links">
       <a href="https://pubmed.ncbi.nlm.nih.gov/35204726/" target="_blank" class="pub-link">PubMed</a>
     </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Infectious Disease</span>
+      <span class="pub-tag">Legionella</span>
+      <span class="pub-tag">Biofilm</span>
+    </div>
   </div>
 
   <div class="pub-item">
-    <div class="pub-authors">Das P, Acharya S, Prahaladan VM, <strong>Kumova OK</strong>, et al.</div>
+    <div class="pub-authors">Das P, Acharya S, Prahaladan VM, <strong>Kumova OK</strong>, Malaeb S, Behera S, Agarwal B, Christensen DJ, Carey AJ, Bhandari V.</div>
     <div class="pub-title">Chitin-derived AVR-48 prevents experimental bronchopulmonary dysplasia and BPD-associated pulmonary hypertension in newborn mice.</div>
     <div class="pub-journal">International Journal of Molecular Sciences. 2021;22(16):8547.</div>
     <div class="pub-links">
       <a href="https://pubmed.ncbi.nlm.nih.gov/34445253/" target="_blank" class="pub-link">PubMed</a>
     </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Pulmonary Health</span>
+      <span class="pub-tag">Bronchopulmonary Dysplasia</span>
+      <span class="pub-tag">Neonatal Disease</span>
+    </div>
   </div>
 
   <div class="pub-item">
-    <div class="pub-authors">Chaubey S, Nader YM, Shah D, <strong>Kumova OK</strong>, et al.</div>
+    <div class="pub-authors">Chaubey S, Nader YM, Shah D, <strong>Kumova OK</strong>, Prahaladan V, Carey AJ, Andersson S, Bhandari V.</div>
     <div class="pub-title">α1,3-Fucosyltransferase-IX, an enzyme of pulmonary endogenous lung stem cell marker SSEA-1, alleviates experimental bronchopulmonary dysplasia.</div>
     <div class="pub-journal">Pediatric Research. 2021;89(5):1126–1135.</div>
     <div class="pub-links">
       <a href="https://pubmed.ncbi.nlm.nih.gov/32303051/" target="_blank" class="pub-link">PubMed</a>
     </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Pulmonary Health</span>
+      <span class="pub-tag">Bronchopulmonary Dysplasia</span>
+      <span class="pub-tag">Stem Cells</span>
+    </div>
   </div>
 
   <div class="pub-item">
-    <div class="pub-authors">Gary E, O'Connor M, Chakhtoura M, Tardif V, <strong>Kumova OK</strong>, et al.</div>
+    <div class="pub-authors">Gary E, O'Connor M, Chakhtoura M, Tardif V, <strong>Kumova OK</strong>, Malherbe DC, Sutton WF, Haigwood NL, Kutzler MA, Haddad EK.</div>
     <div class="pub-title">Adenosine deaminase-1 enhances germinal center formation and functional antibody responses to HIV-1 envelope DNA and protein vaccines.</div>
     <div class="pub-journal">Vaccine. 2020;38(22):3821–3831.</div>
     <div class="pub-links">
       <a href="https://pubmed.ncbi.nlm.nih.gov/32280045/" target="_blank" class="pub-link">PubMed</a>
+    </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Vaccinology</span>
+      <span class="pub-tag">HIV</span>
+      <span class="pub-tag">Adjuvants</span>
     </div>
   </div>
 
@@ -1023,6 +1143,11 @@
     <div class="pub-links">
       <a href="https://pubmed.ncbi.nlm.nih.gov/31603951/" target="_blank" class="pub-link">PubMed</a>
     </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Neonatal Immunity</span>
+      <span class="pub-tag">Influenza</span>
+      <span class="pub-tag">Probiotics</span>
+    </div>
   </div>
 
   <div class="pub-item">
@@ -1031,6 +1156,11 @@
     <div class="pub-journal">Journal of Leukocyte Biology. 2019;106(5):1051–1061.</div>
     <div class="pub-links">
       <a href="https://pubmed.ncbi.nlm.nih.gov/31260598/" target="_blank" class="pub-link">PubMed</a>
+    </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Neonatal Immunity</span>
+      <span class="pub-tag">CD8+ T Cells</span>
+      <span class="pub-tag">Adaptive Immunity</span>
     </div>
   </div>
 
@@ -1041,14 +1171,24 @@
     <div class="pub-links">
       <a href="https://pubmed.ncbi.nlm.nih.gov/30536476/" target="_blank" class="pub-link">PubMed</a>
     </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Neonatal Immunity</span>
+      <span class="pub-tag">CD8+ T Cells</span>
+      <span class="pub-tag">Influenza</span>
+    </div>
   </div>
 
   <div class="pub-item">
-    <div class="pub-authors">Carey AJ, Hope JL, Mueller YM, Fike AJ, <strong>Kumova OK</strong>, et al.</div>
+    <div class="pub-authors">Carey AJ, Hope JL, Mueller YM, Fike AJ, <strong>Kumova OK</strong>, van Zessen DBH, Steegers EAP, van der Burg M, Katsikis PD.</div>
     <div class="pub-title">Public clonotypes and convergent recombination characterize the naïve CD8+ T-cell receptor repertoire of extremely preterm neonates.</div>
     <div class="pub-journal">Frontiers in Immunology. 2017;8:1859.</div>
     <div class="pub-links">
       <a href="https://pubmed.ncbi.nlm.nih.gov/29312340/" target="_blank" class="pub-link">PubMed</a>
+    </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Neonatal Immunity</span>
+      <span class="pub-tag">TCR Repertoire</span>
+      <span class="pub-tag">Preterm</span>
     </div>
   </div>
 
@@ -1059,23 +1199,38 @@
     <div class="pub-links">
       <a href="https://pubmed.ncbi.nlm.nih.gov/28355204/" target="_blank" class="pub-link">PubMed</a>
     </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Neonatal Immunity</span>
+      <span class="pub-tag">CD8+ T Cells</span>
+      <span class="pub-tag">T Cell Development</span>
+    </div>
   </div>
 
   <div class="pub-item">
     <div class="pub-authors">Goodwin IP, <strong>Kumova OK</strong>, Ninio S.</div>
     <div class="pub-title">A conserved OmpA-like protein in Legionella pneumophila required for efficient intracellular replication.</div>
-    <div class="pub-journal">FEMS Microbiology Letters. 2016.</div>
+    <div class="pub-journal">FEMS Microbiology Letters. 2016;363(16):fnw173.</div>
     <div class="pub-links">
       <a href="https://pubmed.ncbi.nlm.nih.gov/27421957/" target="_blank" class="pub-link">PubMed</a>
+    </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Infectious Disease</span>
+      <span class="pub-tag">Legionella</span>
+      <span class="pub-tag">Pathogenesis</span>
     </div>
   </div>
 
   <div class="pub-item">
-    <div class="pub-authors">Fike AJ, <strong>Kumova OK</strong>, Carey AJ.</div>
+    <div class="pub-authors">Carey AJ, Gracias DT, Thayer JL, Boesteanu AC, <strong>Kumova OK</strong>, Mueller YM, Hope JL, Fraietta JA, van Zessen DB, Katsikis PD.</div>
     <div class="pub-title">Rapid Evolution of the CD8+ TCR Repertoire in Neonatal Mice.</div>
-    <div class="pub-journal">Journal of Immunology.</div>
+    <div class="pub-journal">Journal of Immunology. 2016;196(6):2602–2611.</div>
     <div class="pub-links">
       <a href="https://pubmed.ncbi.nlm.nih.gov/26873987/" target="_blank" class="pub-link">PubMed</a>
+    </div>
+    <div class="pub-tags">
+      <span class="pub-tag">Neonatal Immunity</span>
+      <span class="pub-tag">CD8+ T Cells</span>
+      <span class="pub-tag">TCR Repertoire</span>
     </div>
   </div>
 </section>
@@ -1085,11 +1240,14 @@
   <div class="section-label">Download</div>
   <div class="section-title">Curriculum Vitae</div>
   <div class="section-divider"></div>
-  <p>Download my full CV or a targeted resume for specific positions in research, science policy, or teaching.</p>
-  <div class="cv-buttons">
-    <a href="#" class="btn btn-primary">Full CV (PDF)</a>
-    <a href="#" class="btn btn-outline" style="border-color:#ffffff;color:#ffffff;">Research Resume</a>
-    <a href="#" class="btn btn-outline" style="border-color:#ffffff;color:#ffffff;">Teaching CV</a>
+  <p style="text-align:center;">Download my full CV or a targeted resume for specific positions in research, science policy, or teaching.</p>
+  <div class="cv-buttons" style="flex-direction:column;align-items:center;gap:20px;">
+    <a href="#" class="btn btn-primary" style="width:240px;display:inline-flex;align-items:center;justify-content:center;">Full CV (PDF)</a>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+      <a href="#" class="btn btn-outline" style="border-color:#ffffff;color:#ffffff;width:240px;display:inline-flex;align-items:center;justify-content:center;">Research Resume</a>
+      <a href="#" class="btn btn-outline" style="border-color:#ffffff;color:#ffffff;width:240px;display:inline-flex;align-items:center;justify-content:center;">Science Policy Resume</a>
+      <a href="#" class="btn btn-outline" style="border-color:#ffffff;color:#ffffff;width:240px;display:inline-flex;align-items:center;justify-content:center;">Teaching CV</a>
+    </div>
   </div>
 </section>
 
