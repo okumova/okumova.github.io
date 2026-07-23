@@ -746,6 +746,139 @@
 
   footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
   footer a:hover { color: var(--gold); }
+
+  /* ── HAMBURGER ─────────────────────────────────────────────── */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 2px;
+    transition: all 0.25s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ── TABLET (≤ 1024px) ─────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    section { padding: 70px 48px; }
+    .cv-section { padding: 70px 48px; }
+
+    #home { padding: 90px 48px 70px; gap: 48px; }
+
+    .research-grid { grid-template-columns: repeat(2, 1fr); }
+    .research-themes { grid-template-columns: repeat(2, 1fr); }
+
+    .about-grid { grid-template-columns: 1fr 2fr; gap: 40px; }
+    .teaching-grid { gap: 40px; }
+
+    .hero-text h1 { font-size: 2.8rem; }
+    .hero-photo { width: 320px; height: 390px; }
+  }
+
+  /* ── MOBILE (≤ 768px) ──────────────────────────────────────── */
+  @media (max-width: 768px) {
+    /* Nav */
+    nav { padding: 0 24px; position: relative; flex-wrap: wrap; height: auto; min-height: 60px; }
+    .nav-name { padding: 16px 0; }
+    .nav-hamburger { display: flex; }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      padding: 0 0 16px;
+      gap: 0;
+      justify-content: flex-start;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links a {
+      display: block;
+      padding: 12px 4px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.88rem;
+    }
+    .nav-links li:last-child a { border-bottom: none; }
+
+    /* Hero */
+    #home {
+      flex-direction: column-reverse;
+      padding: 80px 28px 56px;
+      gap: 36px;
+      text-align: center;
+      min-height: auto;
+    }
+    .hero-text { max-width: 100%; }
+    .hero-text h1 { font-size: 2.2rem; }
+    .hero-divider { margin: 0 auto 24px; }
+    .hero-stats { justify-content: center; gap: 28px; }
+    .hero-buttons { justify-content: center; }
+    .hero-photo {
+      width: 220px;
+      height: 265px;
+      flex-shrink: 0;
+      align-self: center;
+    }
+
+    /* Sections */
+    section { padding: 56px 28px; }
+    .cv-section { padding: 56px 28px; }
+    .section-title { font-size: 1.9rem; }
+
+    /* About */
+    .about-grid { grid-template-columns: 1fr; gap: 36px; }
+    .about-sidebar { position: static; }
+    .about-sidebar img { max-width: 260px; display: block; margin: 0 auto 20px; }
+
+    /* Research */
+    .research-grid { grid-template-columns: 1fr; }
+    .research-themes { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+    /* Policy */
+    .report-card { flex-direction: column; gap: 12px; padding: 24px 22px; }
+    .report-year { width: auto; }
+
+    /* Teaching */
+    .teaching-grid { grid-template-columns: 1fr; gap: 36px; }
+    .teaching-roles { position: static; }
+
+    /* CV buttons */
+    .cv-buttons { gap: 14px; }
+    .cv-buttons .btn,
+    .cv-buttons a.btn { width: 100% !important; max-width: 320px; }
+
+    /* Contact */
+    .contact-form { max-width: 100%; }
+  }
+
+  /* ── SMALL PHONE (≤ 480px) ─────────────────────────────────── */
+  @media (max-width: 480px) {
+    section { padding: 48px 20px; }
+    .cv-section { padding: 48px 20px; }
+
+    #home { padding: 72px 20px 48px; }
+    .hero-text h1 { font-size: 1.9rem; }
+    .hero-text p { font-size: 1rem; }
+    .hero-photo { width: 180px; height: 216px; }
+
+    .section-title { font-size: 1.65rem; }
+    .research-themes { grid-template-columns: 1fr; }
+
+    nav { padding: 0 16px; }
+    footer { padding: 20px 20px; }
+  }
 </style>
 </head>
 <body>
@@ -753,16 +886,19 @@
 <!-- NAV -->
 <nav>
   <span class="nav-name">Ogan K. Kumova, PhD</span>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#policy">Policy</a></li>
-    <li><a href="#teaching">Teaching</a></li>
-    <li><a href="#publications">Publications</a></li>
-    <li><a href="#cv">CV</a></li>
-    <li><a href="#contact">Contact</a></li>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home" class="nav-close">Home</a></li>
+    <li><a href="#about" class="nav-close">About</a></li>
+    <li><a href="#research" class="nav-close">Research</a></li>
+    <li><a href="#policy" class="nav-close">Policy</a></li>
+    <li><a href="#teaching" class="nav-close">Teaching</a></li>
+    <li><a href="#publications" class="nav-close">Publications</a></li>
+    <li><a href="#cv" class="nav-close">CV</a></li>
+    <li><a href="#contact" class="nav-close">Contact</a></li>
   </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HOME -->
@@ -830,7 +966,7 @@
       <p>Eventually the researcher in me took over. After my years in science education, I wanted to get back into the lab, so I joined <a href="https://drexel.edu/medicine/academics/graduate-programs/microbiology-immunology/" target="_blank" style="color:var(--navy);font-weight:600;">Drexel University College of Medicine</a> as a laboratory technician. Working in the laboratory of Dr. Shira Ninio, I studied how <em>Legionella pneumophila</em> forms biofilms and replicates inside host cells — and while doing that, I pursued my Master of Science in Infectious Diseases at the same time. Getting back to the bench reminded me exactly why I loved research in the first place.</p>
       <p>From there I transitioned to the <a href="https://drexel.edu/medicine/about/departments/microbiology-immunology/research/the-carey-lab/" target="_blank" style="color:var(--navy);font-weight:600;">laboratory of Dr. Alison Carey</a>, initially joining as a lab manager before deciding to pursue my Ph.D. in Microbiology and Immunology. My dissertation focused on neonatal immunology — why newborns struggle to mount effective immune responses to respiratory infections and what might be done about it. I studied defects in neonatal CD8+ T cell responses, investigated whether probiotic interventions could improve early viral control during influenza infection, and looked at modifiable risk factors that influence how the neonatal immune system develops. Alongside that work I also collaborated with the Wistar Cancer Institute on DNA-based HIV vaccine development and was part of the 2016 NIH Clinical and Translational Research Cohort. Outside the lab, I served as President of the Graduate Student Association for two years — a role I genuinely enjoyed, both for the community it built and for the chance to advocate for my fellow students.</p>
       <p>After completing my Ph.D., I joined the FDA's Office of Vaccine Research and Review as an ORISE Postdoctoral Fellow under Dr. Margaret Bash, where I worked on developing vaccines against <em>Neisseria gonorrhoeae</em> — an increasingly urgent public health problem as antibiotic resistance grows. As a postdoc, I was involved in vaccine candidate development and characterization, ran immunology assays to look at mucosal and systemic immune responses, and contributed to murine immunization studies. I was also part of a broader NIH-U19 multi-site consortium, which gave me great exposure to collaborative science and the FDA's regulatory environment.</p>
-      <p>From there I joined the National Academies of Sciences, Engineering, and Medicine as a Program Officer focused on vaccine safety, leading expert consensus studies for federal agencies including the CDC, FDA, VA, and DoD. I've contributed to two published National Academies reports and in October 2025 briefed Congressional staff from the Senate HELP Committee and both chambers' Appropriations Committees on COVID-19 vaccine safety.</p>
+      <p>From there I joined the National Academies of Sciences, Engineering, and Medicine as a Program Officer focused on vaccine safety, supporting expert consensus studies for federal agencies including the CDC, FDA, VA, and DoD. I've contributed to two published National Academies reports and in October 2025 briefed Congressional staff from the Senate HELP Committee and both chambers' Appropriations Committees on COVID-19 vaccine safety.</p>
       <p>The curiosity that started with a childhood microscope is still very much the engine. I just have bigger questions now.</p>
     </div>
   </div>
@@ -870,7 +1006,7 @@
     <div class="research-card">
       <div class="institution">NASEM &nbsp;·&nbsp; Policy Research</div>
       <h3>Vaccine Safety Evidence Synthesis</h3>
-      <p>At the National Academies, leads comprehensive evidence reviews on vaccine safety commissioned by federal agencies. Oversees expert committee processes, evidence synthesis, and the production of consensus reports that directly inform national public health policy.</p>
+      <p>At the National Academies, supports comprehensive evidence reviews on vaccine safety commissioned by federal agencies. Oversees expert committee processes, evidence synthesis, and the production of consensus reports that directly inform national public health policy.</p>
     </div>
   </div>
 </section>
@@ -1280,10 +1416,13 @@
   <p style="text-align:center;">Download my full CV or a targeted resume for specific positions in research, science policy, or teaching.</p>
   <div class="cv-buttons" style="flex-direction:column;align-items:center;gap:20px;">
     <a href="Kumova_CV_Full.pdf" target="_blank" class="btn btn-primary" style="width:240px;display:inline-flex;align-items:center;justify-content:center;">Full CV</a>
-    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
-      <a href="Kumova_Research_Resume.pdf" target="_blank" class="btn btn-outline" style="border-color:#ffffff;color:#ffffff;width:240px;display:inline-flex;align-items:center;justify-content:center;">Research Resume</a>
-      <a href="Kumova_SciencePolicy_Resume.pdf" target="_blank" class="btn btn-outline" style="border-color:#ffffff;color:#ffffff;width:240px;display:inline-flex;align-items:center;justify-content:center;">Science Policy Resume</a>
-      <a href="Kumova_Teaching_CV.pdf" target="_blank" class="btn btn-outline" style="border-color:#ffffff;color:#ffffff;width:240px;display:inline-flex;align-items:center;justify-content:center;">Teaching CV</a>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;width:100%;">
+      <div style="font-family:Arial,sans-serif;font-size:0.72rem;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.45);font-weight:600;">Targeted Resumes</div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+        <a href="Kumova_Research_Resume.pdf" target="_blank" class="btn btn-outline" style="border-color:#ffffff;color:#ffffff;width:240px;display:inline-flex;align-items:center;justify-content:center;">Research Resume</a>
+        <a href="Kumova_SciencePolicy_Resume.pdf" target="_blank" class="btn btn-outline" style="border-color:#ffffff;color:#ffffff;width:240px;display:inline-flex;align-items:center;justify-content:center;">Science Policy Resume</a>
+        <a href="Kumova_Teaching_CV.pdf" target="_blank" class="btn btn-outline" style="border-color:#ffffff;color:#ffffff;width:240px;display:inline-flex;align-items:center;justify-content:center;">Teaching Resume</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1328,6 +1467,27 @@
 
 
 <script>
+// Hamburger nav toggle
+(function () {
+  var btn   = document.getElementById('nav-hamburger');
+  var links = document.getElementById('nav-links');
+  if (!btn || !links) return;
+  btn.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    btn.classList.toggle('open', open);
+  });
+  // Close menu when any nav link is clicked
+  links.querySelectorAll('.nav-close').forEach(function (a) {
+    a.addEventListener('click', function () {
+      links.classList.remove('open');
+      btn.classList.remove('open');
+    });
+  });
+})();
+</script>
+
+<script>
+// Formspree contact form
 (function () {
   var form     = document.getElementById('contact-form');
   var btn      = document.getElementById('cf-submit');
