@@ -285,7 +285,7 @@
 
   .about-sidebar {
     position: sticky;
-    top: 215px;
+    top: 245px;
   }
 
   .about-sidebar img {
@@ -860,7 +860,7 @@
   /* ── MOBILE (≤ 768px) ──────────────────────────────────────── */
   @media (max-width: 768px) {
     /* Nav */
-    nav { padding: 0 24px; position: relative; flex-wrap: wrap; height: auto; min-height: 60px; }
+    nav { padding: 0 24px; position: fixed; top: 0; left: 0; right: 0; flex-wrap: wrap; height: auto; min-height: 60px; z-index: 100; }
     .nav-name { padding: 16px 0; }
     .nav-hamburger { display: flex; }
     .nav-links {
@@ -902,8 +902,9 @@
     }
 
     /* Sections */
+    body { padding-top: 60px; }
     section { padding: 56px 28px; }
-    .section-sticky-header { top: 0; }
+    .section-sticky-header { top: 60px; }
     .policy-intro-grid { grid-template-columns: 1fr !important; }
     .cv-section { padding: 56px 28px; }
     .section-title { font-size: 1.9rem; }
@@ -957,6 +958,7 @@
     top: 64px;
     z-index: 50;
     background: var(--white);
+    padding-top: 28px;
     padding-bottom: 16px;
   }
   section:nth-child(even) .section-sticky-header {
