@@ -83,16 +83,16 @@
 
 <style>
 :root {
-  --bg:       #06101e;
-  --surface:  #0b1929;
-  --card:     #0f2035;
-  --border:   #1a334f;
+  --bg:       #132437;
+  --surface:  #1c3049;
+  --card:     #233a56;
+  --border:   #3a5c80;
   --gold:     #c9a84c;
   --gold-dim: #8a6f2e;
   --teal:     #2dd4bf;
-  --text:     #dde6f0;
-  --muted:    #6b7f96;
-  --white:    #f0f6ff;
+  --text:     #e7eef7;
+  --muted:    #9db2c9;
+  --white:    #f5faff;
 }
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -120,13 +120,13 @@ nav {
   justify-content: space-between;
   padding: 0 60px;
   height: 68px;
-  background: rgba(6,16,30,0.85);
+  background: rgba(19,36,55,0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(201,168,76,0.15);
   transition: background 0.3s;
 }
 .nav-brand {
-  font-size: 0.82rem;
+  font-size: 0.918rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--gold);
@@ -164,7 +164,7 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
 }
 .nav-links a {
   font-family: Arial, sans-serif;
-  font-size: 0.74rem;
+  font-size: 0.829rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--muted);
@@ -191,8 +191,8 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
   position: absolute;
   inset: 0;
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='104' viewBox='0 0 60 104'%3E%3Cpath d='M30 2 L58 18 L58 50 L30 66 L2 50 L2 18 Z' fill='none' stroke='%231a334f' stroke-width='0.5'/%3E%3Cpath d='M30 38 L58 54 L58 86 L30 102 L2 86 L2 54 Z' fill='none' stroke='%231a334f' stroke-width='0.5'/%3E%3Cpath d='M-30 2 L-2 18 L-2 50 L-30 66 L-58 50 L-58 18 Z' fill='none' stroke='%231a334f' stroke-width='0.5'/%3E%3C/svg%3E");
-  opacity: 0.6;
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='104' viewBox='0 0 60 104'%3E%3Cpath d='M30 2 L58 18 L58 50 L30 66 L2 50 L2 18 Z' fill='none' stroke='%234a76a6' stroke-width='0.5'/%3E%3Cpath d='M30 38 L58 54 L58 86 L30 102 L2 86 L2 54 Z' fill='none' stroke='%234a76a6' stroke-width='0.5'/%3E%3Cpath d='M-30 2 L-2 18 L-2 50 L-30 66 L-58 50 L-58 18 Z' fill='none' stroke='%234a76a6' stroke-width='0.5'/%3E%3C/svg%3E");
+  opacity: 0.85;
   z-index: 0;
 }
 
@@ -213,7 +213,7 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
 
 .hero-eyebrow {
   font-family: Arial, sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.826rem;
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--gold);
@@ -260,7 +260,7 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
 }
 .hero-tag {
   font-family: Arial, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.806rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   padding: 6px 16px;
@@ -277,7 +277,7 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
 }
 .btn-primary {
   font-family: Arial, sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.874rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 14px 32px;
@@ -291,7 +291,7 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
 .btn-primary:hover { background: #e0bc5c; transform: translateY(-1px); }
 .btn-outline {
   font-family: Arial, sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.874rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 14px 32px;
@@ -397,7 +397,7 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
 }
 .stat-label {
   font-family: Arial, sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.826rem;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--muted);
@@ -405,8 +405,9 @@ nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rota
 
 /* ── SECTION BASE ── */
 section {
-  padding: 100px 80px;
+  padding: 78px 80px;
   position: relative;
+  scroll-margin-top: 84px;
 }
 /* Explicit section backgrounds (never rely on nth-child — sibling order shifts) */
 #hero          { background: var(--bg); }
@@ -420,25 +421,25 @@ section {
 
 .section-label {
   font-family: Arial, sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.986rem;
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--teal);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 .section-title {
   font-size: 2.8rem;
   color: var(--white);
   font-weight: normal;
   line-height: 1.1;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   letter-spacing: -0.5px;
 }
 .section-line {
   width: 48px;
   height: 2px;
   background: var(--gold);
-  margin-bottom: 52px;
+  margin-bottom: 34px;
 }
 
 /* ── ABOUT ── */
@@ -517,7 +518,7 @@ section {
 .timeline-content {}
 .timeline-year {
   font-family: Arial, sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.767rem;
   letter-spacing: 2px;
   color: var(--gold);
   text-transform: uppercase;
@@ -525,19 +526,19 @@ section {
 }
 .timeline-role {
   font-family: Arial, sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.918rem;
   color: var(--text);
   font-weight: 600;
   margin-bottom: 1px;
 }
 .timeline-place {
   font-family: Arial, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.84rem;
   color: var(--muted);
 }
 
 .about-bio p {
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   color: var(--text);
   line-height: 1.9;
   margin-bottom: 22px;
@@ -561,7 +562,7 @@ section {
   align-items: center;
   gap: 10px;
   font-family: Arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.896rem;
   color: var(--muted);
   text-decoration: none;
   transition: color 0.2s;
@@ -598,7 +599,7 @@ section {
 .rc-link-hint {
   display: none;
   font-family: Arial, sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.826rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--gold);
@@ -628,7 +629,7 @@ section {
 }
 .rc-inst {
   font-family: Arial, sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.767rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--muted);
@@ -642,7 +643,7 @@ section {
 }
 .rc-desc {
   font-family: Arial, sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.918rem;
   color: var(--muted);
   line-height: 1.65;
 }
@@ -673,7 +674,7 @@ section {
 /* Policy sub-label */
 .policy-sublabel {
   font-family: Arial, sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.767rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--teal);
@@ -703,7 +704,7 @@ section {
   position: absolute;
   top: 18px; right: 18px;
   font-family: Arial, sans-serif;
-  font-size: 0.58rem;
+  font-size: 0.684rem;
   letter-spacing: 2px;
   padding: 3px 8px;
   border: 1px solid var(--teal);
@@ -715,7 +716,7 @@ section {
   position: absolute;
   top: 18px; right: 18px;
   font-family: Arial, sans-serif;
-  font-size: 0.58rem;
+  font-size: 0.684rem;
   letter-spacing: 2px;
   padding: 3px 8px;
   border: 1px solid var(--gold-dim);
@@ -724,7 +725,7 @@ section {
 }
 .pc-sponsor {
   font-family: Arial, sans-serif;
-  font-size: 0.68rem;
+  font-size: 0.802rem;
   letter-spacing: 2px;
   color: var(--muted);
   text-transform: uppercase;
@@ -739,14 +740,14 @@ section {
 }
 .pc-desc {
   font-family: Arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.896rem;
   color: var(--muted);
   line-height: 1.6;
   margin-bottom: 16px;
 }
 .pc-link {
   font-family: Arial, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.806rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--gold);
@@ -767,7 +768,7 @@ section {
 .briefing-event {}
 .briefing-date {
   font-family: Arial, sans-serif;
-  font-size: 0.62rem;
+  font-size: 0.732rem;
   letter-spacing: 2.5px;
   color: var(--gold);
   text-transform: uppercase;
@@ -775,7 +776,7 @@ section {
 }
 .briefing-text {
   font-family: Arial, sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.918rem;
   color: var(--muted);
   line-height: 1.55;
 }
@@ -790,7 +791,7 @@ section {
 }
 .pub-theme {
   font-family: Arial, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.806rem;
   padding: 8px 18px;
   border: 1px solid var(--border);
   color: var(--muted);
@@ -809,7 +810,7 @@ section {
   align-items: center;
   gap: 8px;
   font-family: Arial, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.84rem;
   color: var(--muted);
   text-decoration: none;
   padding: 8px 16px;
@@ -835,14 +836,14 @@ section {
   padding-top: 2px;
 }
 .pub-title {
-  font-size: 0.88rem;
+  font-size: 0.986rem;
   color: var(--text);
   line-height: 1.55;
   margin-bottom: 6px;
 }
 .pub-authors {
   font-family: Arial, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.84rem;
   color: var(--muted);
   line-height: 1.5;
 }
@@ -871,16 +872,16 @@ section {
 .teaching-card:hover { border-color: var(--gold-dim); }
 .tc-label {
   font-family: Arial, sans-serif;
-  font-size: 0.62rem;
+  font-size: 0.732rem;
   letter-spacing: 2.5px;
   color: var(--teal);
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.tc-course { font-size: 0.95rem; color: var(--white); margin-bottom: 8px; line-height: 1.35; }
+.tc-course { font-size: 1.064rem; color: var(--white); margin-bottom: 8px; line-height: 1.35; }
 .tc-place {
   font-family: Arial, sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.874rem;
   color: var(--muted);
 }
 
@@ -906,7 +907,7 @@ section {
 }
 .cv-btn {
   font-family: Arial, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.806rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 13px 28px;
@@ -922,11 +923,11 @@ section {
 }
 .cv-btn:hover { border-color: var(--gold); color: var(--gold); }
 .cv-btn strong {
-  font-size: 0.78rem;
+  font-size: 0.874rem;
   letter-spacing: 2px;
 }
 .cv-btn small {
-  font-size: 0.6rem;
+  font-size: 0.708rem;
   color: var(--muted);
   letter-spacing: 1.5px;
 }
@@ -936,7 +937,7 @@ section {
   color: var(--bg);
 }
 .cv-btn.primary:hover { background: #dbb958; border-color: #dbb958; color: var(--bg); }
-.cv-btn.primary small { color: rgba(6,16,30,0.6); }
+.cv-btn.primary small { color: rgba(19,36,55,0.6); }
 
 /* ── CONTACT ── */
 #contact {
@@ -984,7 +985,7 @@ section {
   padding: 14px 18px;
   color: var(--text);
   font-family: Arial, sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.986rem;
   outline: none;
   transition: border-color 0.2s;
 }
@@ -1001,7 +1002,7 @@ section {
   border: none;
   border-radius: 2px;
   font-family: Arial, sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.874rem;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   font-weight: 700;
@@ -1016,7 +1017,7 @@ section {
   border-radius: 2px;
   color: var(--teal);
   font-family: Arial, sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.008rem;
   text-align: center;
   margin-top: 16px;
   background: rgba(45,212,191,0.04);
@@ -1025,7 +1026,7 @@ section {
   display: none;
   color: #f87171;
   font-family: Arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.896rem;
   margin-bottom: 12px;
 }
 .contact-socials {
@@ -1045,7 +1046,7 @@ section {
   align-items: center;
   gap: 9px;
   font-family: Arial, sans-serif;
-  font-size: 0.76rem;
+  font-size: 0.851rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   text-decoration: none;
@@ -1070,7 +1071,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   font-family: Arial, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.806rem;
   color: var(--muted);
 }
 footer a { color: var(--muted); text-decoration: none; }
@@ -1099,7 +1100,7 @@ footer a:hover { color: var(--gold); }
     top: 68px; left: 0; right: 0;
     flex-direction: column;
     gap: 0;
-    background: rgba(6,16,30,0.97);
+    background: rgba(19,36,55,0.97);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(201,168,76,0.15);
     padding: 8px 0 16px;
@@ -1114,13 +1115,15 @@ footer a:hover { color: var(--gold); }
   .nav-links a {
     display: block;
     padding: 14px 24px;
-    font-size: 0.82rem;
-    border-bottom: 1px solid rgba(26,51,79,0.5);
+    font-size: 0.918rem;
+    border-bottom: 1px solid rgba(58,92,128,0.5);
   }
   #hero { padding: 100px 28px 48px; }
   .hero-name { font-size: 3rem; }
   section { padding: 64px 28px; }
-  .stats-strip { grid-template-columns: repeat(2,1fr); padding: 30px 28px; gap: 20px; }
+  .stats-strip { grid-template-columns: repeat(2,1fr); padding: 30px 20px; gap: 16px; }
+  .stat-item { padding: 0 6px; min-width: 0; overflow-wrap: break-word; }
+  .stat-label { letter-spacing: 1.2px; font-size: 0.76rem; }
   .research-grid { grid-template-columns: 1fr; }
   .policy-grid { grid-template-columns: 1fr; }
   .teaching-grid { grid-template-columns: 1fr; }
@@ -1174,7 +1177,7 @@ footer a:hover { color: var(--gold); }
 .rm-close:hover { color: var(--text); }
 .rm-num {
   font-family: Arial, sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.767rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--gold);
@@ -1189,7 +1192,7 @@ footer a:hover { color: var(--gold); }
 }
 .rm-inst {
   font-family: Arial, sans-serif;
-  font-size: 0.78rem;
+  font-size: 0.874rem;
   letter-spacing: 1px;
   color: var(--muted);
   margin-bottom: 28px;
@@ -1203,7 +1206,7 @@ footer a:hover { color: var(--gold); }
 }
 .rm-pubs-label {
   font-family: Arial, sans-serif;
-  font-size: 0.65rem;
+  font-size: 0.767rem;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--teal);
@@ -1218,13 +1221,13 @@ footer a:hover { color: var(--gold); }
 }
 #rm-pubs .rm-pub-item {
   font-family: Georgia, serif;
-  font-size: 0.88rem;
+  font-size: 0.986rem;
   color: var(--text);
   line-height: 1.5;
 }
 #rm-pubs .rm-pub-year {
   font-family: Arial, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.806rem;
   color: var(--gold);
   letter-spacing: 1px;
   margin-bottom: 2px;
@@ -1244,14 +1247,14 @@ footer a:hover { color: var(--gold); }
 .rm-pub:last-child { border-bottom: none; }
 .rm-pub-title {
   font-family: Georgia, serif;
-  font-size: 0.92rem;
+  font-size: 1.03rem;
   color: var(--text);
   line-height: 1.5;
   margin-bottom: 4px;
 }
 .rm-pub-journal {
   font-family: Arial, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.84rem;
   color: var(--muted);
   letter-spacing: 0.3px;
 }
@@ -1271,19 +1274,19 @@ footer a:hover { color: var(--gold); }
 /* Interactive companion links on report cards */
 .pc-extra-links { display: flex; flex-direction: column; align-items: flex-start;
   gap: 10px; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); }
-.pc-link-sm { font-size: 0.7rem !important; opacity: 0.85; }
+.pc-link-sm { font-size: 0.826rem !important; opacity: 0.85; }
 .pc-link-sm:hover { opacity: 1; }
 
 /* ── LANGUAGE SWITCH ── */
 .lang-switch { display: flex; align-items: center; gap: 6px; }
 .lang-btn {
-  font-family: Arial, sans-serif; font-size: 0.68rem; letter-spacing: 1.6px;
+  font-family: Arial, sans-serif; font-size: 0.802rem; letter-spacing: 1.6px;
   text-transform: uppercase; background: none; border: none; padding: 4px 2px;
   color: var(--muted); cursor: pointer; transition: color 0.2s;
 }
 .lang-btn:hover { color: var(--text); }
 .lang-btn.active { color: var(--gold); }
-.lang-sep { color: var(--border); font-size: 0.68rem; }
+.lang-sep { color: var(--border); font-size: 0.802rem; }
 @media (max-width: 768px) {
   .lang-switch { order: 1; margin-left: auto; margin-right: 16px; }
   .nav-toggle { order: 2; }
@@ -1308,7 +1311,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .skip-link {
   position: absolute; left: 8px; top: -60px; z-index: 500;
   background: var(--gold); color: #06101e; padding: 10px 18px;
-  font-family: Arial, sans-serif; font-size: 0.78rem; letter-spacing: 1.5px;
+  font-family: Arial, sans-serif; font-size: 0.874rem; letter-spacing: 1.5px;
   text-transform: uppercase; text-decoration: none; border-radius: 2px;
   transition: top 0.15s;
 }
@@ -1317,8 +1320,38 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* --- Full CV featured above the specialised resumes --- */
 .cv-primary { display: flex; justify-content: center; margin-bottom: 20px; }
 .cv-primary .cv-btn { padding: 16px 46px; min-width: 260px; }
-.cv-primary .cv-btn strong { font-size: 0.86rem; }
+.cv-primary .cv-btn strong { font-size: 0.963rem; }
 
+/* --- Sticky compact section headers (desktop/tablet) --- */
+.sec-head {
+  position: sticky;
+  top: 68px;
+  z-index: 40;
+  background: inherit;
+  padding-top: 14px;
+  padding-bottom: 6px;
+  margin-top: -14px;
+  margin-left: -80px;
+  margin-right: -80px;
+  padding-left: 80px;
+  padding-right: 80px;
+  transition: padding-top 0.2s ease, padding-bottom 0.2s ease;
+}
+.sec-head.is-stuck {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  box-shadow: 0 10px 22px -14px rgba(0,0,0,0.8);
+}
+.sec-head.is-stuck .section-label,
+.sec-head.is-stuck .section-line { display: none; }
+.sec-head.is-stuck .section-title {
+  font-size: 1.35rem;
+  margin-bottom: 0;
+  transition: font-size 0.2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sec-head, .sec-head.is-stuck .section-title { transition: none; }
+}
 /* --- Mobile: unstick and de-pad the section headers --- */
 @media (max-width: 768px) {
   .sec-head {
@@ -1326,18 +1359,53 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-shadow: none !important;
   }
   .section-title { font-size: 2.05rem; margin-bottom: 8px; }
-  .section-label { font-size: 0.74rem; letter-spacing: 2.5px; margin-bottom: 8px; }
+  .section-label { font-size: 0.829rem; letter-spacing: 2.5px; margin-bottom: 8px; }
   .section-line { margin-bottom: 26px !important; }
   .cv-section .section-line { margin: 0 auto 26px !important; }
-  section { padding: 48px 24px; }
+  section { padding: 40px 24px; scroll-margin-top: 72px; }
   .cv-section { padding: 48px 24px; }
   .cv-primary .cv-btn { width: 100%; min-width: 0; padding: 15px 20px; }
   .cv-buttons { flex-direction: column; gap: 10px; }
   .cv-buttons .cv-btn { width: 100%; padding: 13px 16px; }
   .cv-desc { margin-bottom: 30px; }
 }
+
+/* --- Publication topic filter --- */
+.pub-theme {
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+.pub-theme:hover { border-color: var(--gold); color: var(--gold); }
+.pub-theme:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.pub-theme[aria-pressed="true"] {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #10203a;
+  font-weight: bold;
+}
+.pub-theme-clear { border-style: dashed; }
+.pub-list.is-filtering .pub-item { opacity: 0.34; transition: opacity 0.2s; }
+.pub-list.is-filtering .pub-item.pub-dim .pub-title a,
+.pub-list.is-filtering .pub-item.pub-dim .pub-authors,
+.pub-list.is-filtering .pub-item.pub-dim .pub-year { color: var(--muted) !important; }
+.pub-list.is-filtering .pub-item.pub-dim .pub-title a { border-bottom-color: transparent; }
+.pub-list.is-filtering .pub-item.pub-dim .pub-authors strong { color: var(--muted) !important; }
+.pub-list.is-filtering .pub-item.pub-dim span[style*="var(--teal)"] {
+  color: var(--muted) !important; border-color: rgba(120,140,165,0.2) !important;
+}
+.pub-list.is-filtering .pub-item.pub-hit { opacity: 1; }
+.pub-list.is-filtering .pub-item.pub-hit .pub-title a,
+.pub-list.is-filtering .pub-item.pub-hit .pub-year { color: var(--gold) !important; }
+.pub-list.is-filtering .pub-item.pub-hit { border-left: 2px solid var(--gold); padding-left: 14px; }
+@media (prefers-reduced-motion: reduce) { .pub-list.is-filtering .pub-item { transition: none; } }
+
 </style>
 </head>
 <body>
@@ -1411,7 +1479,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="sec-head" style="position:sticky;top:68px;z-index:50;background:var(--surface);padding-top:80px;padding-bottom:24px;margin-top:-80px;">
+  <div class="sec-head">
     <div class="section-label">Background</div>
     <h2 class="section-title">About Me</h2>
     <div class="section-line"></div>
@@ -1466,19 +1534,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     </div>
 
     <div class="about-bio">
-      <p>I've been a scientist at heart since I was six years old — when I got my first microscope and a subscription to <em>Discovery Kids</em> magazine that I read cover to cover every month. I grew up in Turkey asking questions about everything, and that curiosity never really switched off.</p>
-      <p>My family moved to the United States at the end of middle school, and I finished high school in New Jersey, where I kept finding my way into every science class available. I also started volunteering at the Franklin Institute in Philadelphia during those years, and discovered something important about myself: I loved explaining science just as much as I loved learning it.</p>
-      <p>That combination took me to the University of the Sciences in Philadelphia, where I earned dual Bachelor of Science degrees in Biochemistry and Bioinformatics. After graduating, I taught at Philadelphia University, helped design curricula, and continued science education work at the Franklin Institute — before the researcher in me took over.</p>
-      <p>Graduate training at <a href="https://drexel.edu/medicine/academics/graduate-programs/microbiology-immunology/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);">Drexel University College of Medicine</a> took me from the molecular machinery of <em>Legionella pneumophila</em> to a deeper question: why are newborns so immunologically vulnerable? My doctoral work in the <a href="https://drexel.edu/medicine/about/departments/microbiology-immunology/research/the-carey-lab/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);">laboratory of Alison J. Carey, MD</a> earned the Amedeo Bondi Award for Excellence in Research and the Dean's Excellence Award for Collaborative Research, and placed me in the 2016 NIH Clinical and Translational Research Cohort.</p>
-      <p>A postdoctoral fellowship at the FDA's Office of Vaccines Research and Review followed, where I developed novel vaccine candidates against <em>Neisseria gonorrhoeae</em> within the framework of federal regulatory science. From there, I joined the National Academies of Sciences, Engineering, and Medicine, where I support high-stakes evidence reviews commissioned by the CDC, VA, DoD, and FDA — translating complex immunological science into recommendations that shape national public health policy.</p>
-      <p style="font-size:0.95rem;color:var(--muted);">The curiosity that started with a childhood microscope is still the engine. The questions have just gotten bigger.</p>
+      <p>I've been a scientist at heart since I was six — the year I got my first microscope and a subscription to <em>Discovery Kids</em> that I read cover to cover, then read again. I grew up in Turkey as the kid who asked <em>why</em> one too many times. Nobody ever managed to talk me out of it.</p>
+      <p>We moved to the United States at the end of middle school, and I finished high school in New Jersey, where I found my way into every science class the schedule would allow. Around the same time I started volunteering at the Franklin Institute in Philadelphia, and that is where I learned something about myself it took me years to fully act on: I love explaining science as much as I love doing it. Watching the moment something clicks for a room full of eight-year-olds is its own kind of result.</p>
+      <p>That combination carried me to the University of the Sciences in Philadelphia, where I earned dual Bachelor of Science degrees in Biochemistry and Bioinformatics. Afterward I taught at Philadelphia University, built curricula, and kept working in science education at the Franklin Institute — a relationship that ended up lasting more than twenty years. For a while I thought that might be the whole career. Then the researcher in me got loud.</p>
+      <p>The pull back to the bench came fast. I returned to <a href="https://drexel.edu/medicine/academics/graduate-programs/microbiology-immunology/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);">Drexel University College of Medicine</a> as a laboratory technician working on <em>Legionella pneumophila</em> — biofilm regulation, OmpA-like proteins, and the quiet machinery a pathogen uses to live inside a human cell. I did that full time while earning a Master of Science in Infectious Diseases at the same time, which I would not recommend to anyone and would absolutely do again. From there I moved into managing a neonatal immunology laboratory, and a different question got hold of me.</p>
+      <p>It was simple to ask and stubborn to answer: why are newborns so immunologically vulnerable? That became my doctoral work in the <a href="https://drexel.edu/medicine/about/departments/microbiology-immunology/research/the-carey-lab/" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);">laboratory of Alison J. Carey, MD</a>. Along the way I was selected for the 2016 NIH Clinical and Translational Research cohort, and the work went on to earn the Amedeo Bondi Award for Excellence in Research and the Dean's Excellence Award for Collaborative Research.</p>
+      <p>Graduate school also taught me that science is a team sport, and that somebody has to do the unglamorous work of keeping the team functional. I served as President of the Biomedical Sciences Graduate Student Association, sat on the Drexel University Graduate Council, and served on the College of Medicine's Biomedical Sciences Executive Committee — the rooms where curriculum, policy, and student life actually get decided. At the bench I trained master's students, neonatology fellows, and junior researchers. Years later, that is still the part I hear about most.</p>
+      <p>I chose my postdoctoral fellowship deliberately. I wanted hands-on translational work <em>and</em> a real look at how regulators think, and the FDA's Office of Vaccines Research and Review offered both. There I developed liposome- and outer membrane vesicle-based vaccine candidates against <em>Neisseria gonorrhoeae</em> under an NIH cooperative research center — and, just as usefully, learned how preclinical evidence is actually judged: GLP standards, protocol design, and the framework the agency uses to weigh vaccine safety and immunogenicity. It changes how you design an experiment when you know exactly who reads it next.</p>
+      <p>That path led to the National Academies of Sciences, Engineering, and Medicine, where I support high-stakes evidence reviews commissioned by the CDC, VA, DoD, and FDA — turning dense immunology into recommendations that people in government can actually act on. Put end to end, it adds up to an unusually complete view of the vaccine pipeline: preclinical development from basic discovery through candidate formulation and animal models, the regulatory science that governs how those candidates are evaluated, and post-licensure surveillance — including the large federal systems that monitor vaccine safety once a product is in people's arms.</p>
+      <p style="font-size:1.064rem;color:var(--muted);">The curiosity that started with a childhood microscope is still the engine. The questions have just gotten bigger — and so have the stakes.</p>
     </div>
   </div>
 </section>
 
 <!-- RESEARCH -->
 <section id="research">
-  <div class="sec-head" style="position:sticky;top:68px;z-index:50;background:var(--bg);padding-top:80px;padding-bottom:24px;margin-top:-80px;">
+  <div class="sec-head">
     <div class="section-label">Science</div>
     <h2 class="section-title">Research</h2>
     <div class="section-line"></div>
@@ -1638,7 +1709,7 @@ document.addEventListener('keydown', function(e) {
   </div></div>
 
   <div style="margin-top:48px;padding-top:36px;border-top:1px solid var(--border);display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
-    <span class="rp-label" style="font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);">Research Profiles</span>
+    <span class="rp-label" style="font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);">Research Profiles</span>
     <a href="https://www.researchgate.net/profile/Ogan-Kumova" aria-label="ResearchGate profile" target="_blank" rel="noopener" class="pub-profile-link">
       <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 40 40"><rect width="40" height="40" rx="4" fill="#00CCBB"/><text x="4" y="34" font-family="Georgia,serif" font-size="28" fill="white" font-weight="bold">R</text><text x="22" y="17" font-family="Georgia,serif" font-size="15" fill="white" font-weight="bold">G</text></svg>
       ResearchGate
@@ -1654,7 +1725,7 @@ document.addEventListener('keydown', function(e) {
 
 <!-- POLICY -->
 <section id="policy">
-  <div class="sec-head" style="position:sticky;top:68px;z-index:50;background:var(--surface);padding-top:80px;padding-bottom:24px;margin-top:-80px;">
+  <div class="sec-head">
     <div class="section-label">National Academies</div>
     <h2 class="section-title">Policy Work</h2>
     <div class="section-line"></div>
@@ -1667,16 +1738,16 @@ document.addEventListener('keydown', function(e) {
       <a href="https://nap.nationalacademies.org/catalog/27746/evidence-review-of-the-adverse-effects-of-covid-19-vaccination-and-intramuscular-vaccine-administration" target="_blank" rel="noopener" style="text-decoration:none;display:block;position:absolute;top:10%;left:0;width:68%;transform:rotate(-4deg);z-index:1;box-shadow:0 12px 36px rgba(0,0,0,0.5);border-radius:2px;overflow:hidden;">
         <div style="background:#3d7a98;padding:14px 12px 12px;display:flex;flex-direction:column;justify-content:space-between;min-height:210px;position:relative;overflow:hidden;">
           <div style="position:absolute;top:-20px;right:-30px;width:80%;height:55%;background:rgba(255,255,255,0.06);transform:rotate(8deg);"></div>
-          <div style="display:flex;gap:7px;position:relative;z-index:1;"><div style="font-family:Arial,sans-serif;font-size:0.55rem;font-weight:900;letter-spacing:0.8px;color:white;line-height:1.2;text-transform:uppercase;">NATIONAL<br>ACADEMIES</div><div style="font-family:Arial,sans-serif;font-size:0.36rem;color:rgba(255,255,255,0.8);line-height:1.6;font-style:italic;">Sciences<br>Engineering<br>Medicine</div></div>
-          <div style="position:relative;z-index:1;"><p style="font-family:Georgia,serif;font-size:0.66rem;color:white;line-height:1.4;margin:0 0 8px;">Evidence Review of the Adverse Effects of COVID-19 Vaccination and Intramuscular Vaccine Administration</p><div style="border-top:1px solid rgba(255,255,255,0.25);padding-top:5px;"><span style="font-family:Arial,sans-serif;font-size:0.44rem;color:rgba(255,255,255,0.7);">Consensus Study Report</span></div></div>
+          <div style="display:flex;gap:7px;position:relative;z-index:1;"><div style="font-family:Arial,sans-serif;font-size:0.649rem;font-weight:900;letter-spacing:0.8px;color:white;line-height:1.2;text-transform:uppercase;">NATIONAL<br>ACADEMIES</div><div style="font-family:Arial,sans-serif;font-size:0.36rem;color:rgba(255,255,255,0.8);line-height:1.6;font-style:italic;">Sciences<br>Engineering<br>Medicine</div></div>
+          <div style="position:relative;z-index:1;"><p style="font-family:Georgia,serif;font-size:0.779rem;color:white;line-height:1.4;margin:0 0 8px;">Evidence Review of the Adverse Effects of COVID-19 Vaccination and Intramuscular Vaccine Administration</p><div style="border-top:1px solid rgba(255,255,255,0.25);padding-top:5px;"><span style="font-family:Arial,sans-serif;font-size:0.44rem;color:rgba(255,255,255,0.7);">Consensus Study Report</span></div></div>
         </div>
       </a>
       
       <a href="https://nap.nationalacademies.org/catalog/29240/vaccine-risk-monitoring-and-evaluation-at-the-centers-for-disease-control-and-prevention" target="_blank" rel="noopener" style="text-decoration:none;display:block;position:absolute;top:0%;left:24%;width:68%;transform:rotate(3deg);z-index:2;box-shadow:0 14px 40px rgba(0,0,0,0.6);border-radius:2px;overflow:hidden;">
         <div style="background:linear-gradient(180deg,#1a4a5c 0%,#0d2b38 60%,#081e28 100%);padding:14px 12px 12px;display:flex;flex-direction:column;justify-content:space-between;min-height:210px;position:relative;overflow:hidden;">
           <svg aria-hidden="true" focusable="false" style="position:absolute;inset:0;width:100%;height:100%;" viewBox="0 0 200 270" preserveAspectRatio="none"><polygon points="200,0 200,155 100,55 0,155 0,95 100,0" fill="#2a8a7a" opacity="0.7"/><polygon points="200,30 200,185 100,85 0,185 0,125 100,30" fill="#1e6080" opacity="0.8"/><polygon points="200,65 200,225 100,125 0,225 0,165 100,65" fill="#0d2b38" opacity="0.95"/></svg>
-          <div style="display:flex;gap:7px;position:relative;z-index:1;"><div style="font-family:Arial,sans-serif;font-size:0.55rem;font-weight:900;letter-spacing:0.8px;color:white;line-height:1.2;text-transform:uppercase;">NATIONAL<br>ACADEMIES</div><div style="font-family:Arial,sans-serif;font-size:0.36rem;color:rgba(255,255,255,0.8);line-height:1.6;font-style:italic;">Sciences<br>Engineering<br>Medicine</div></div>
-          <div style="position:relative;z-index:1;"><p style="font-family:Georgia,serif;font-size:0.66rem;color:white;line-height:1.4;margin:0 0 8px;">Vaccine Risk Monitoring and Evaluation at the Centers for Disease Control and Prevention</p><div style="border-top:1px solid rgba(255,255,255,0.25);padding-top:5px;display:flex;justify-content:flex-end;"><span style="font-family:Arial,sans-serif;font-size:0.44rem;color:rgba(100,200,180,0.85);">Consensus Study Report</span></div></div>
+          <div style="display:flex;gap:7px;position:relative;z-index:1;"><div style="font-family:Arial,sans-serif;font-size:0.649rem;font-weight:900;letter-spacing:0.8px;color:white;line-height:1.2;text-transform:uppercase;">NATIONAL<br>ACADEMIES</div><div style="font-family:Arial,sans-serif;font-size:0.36rem;color:rgba(255,255,255,0.8);line-height:1.6;font-style:italic;">Sciences<br>Engineering<br>Medicine</div></div>
+          <div style="position:relative;z-index:1;"><p style="font-family:Georgia,serif;font-size:0.779rem;color:white;line-height:1.4;margin:0 0 8px;">Vaccine Risk Monitoring and Evaluation at the Centers for Disease Control and Prevention</p><div style="border-top:1px solid rgba(255,255,255,0.25);padding-top:5px;display:flex;justify-content:flex-end;"><span style="font-family:Arial,sans-serif;font-size:0.44rem;color:rgba(100,200,180,0.85);">Consensus Study Report</span></div></div>
         </div>
       </a>
     </div>
@@ -1687,13 +1758,13 @@ document.addEventListener('keydown', function(e) {
     <div class="policy-card ongoing">
       <div class="pc-sponsor">VA · DoD</div>
       <h3 class="pc-title">Neurodegenerative Outcomes and Selected Military Exposures</h3>
-      <p class="pc-desc">A systematic review of evidence linking six military-service exposure categories (pesticides, jet fuels, solvents, heavy metals, PFAS, and particulate matter) to neurodegenerative conditions in Gulf War and Post-9/11 veterans.</p>
+      <p class="pc-desc">A National Academies committee is conducting a review of existing systematic reviews to gauge the strength of the evidence base linking six categories of military-service exposure — pesticides, jet fuels, solvents, heavy metals, per- and polyfluoroalkyl substances (PFAS), and fine particulate matter (PM<sub>2.5</sub>) — to eight neurodegenerative conditions. Each exposure type and its subcategories are examined against each outcome. The committee is not performing new systematic reviews or primary analyses of individual-level data; instead it will recommend where future primary studies or systematic reviews are needed.</p>
       <a href="https://www.nationalacademies.org/projects/HMD-BPH-25-02" target="_blank" rel="noopener" class="pc-link">View Project →</a>
     </div>
     <div class="policy-card ongoing">
       <div class="pc-sponsor">DoD</div>
       <h3 class="pc-title">Direct Neurocognitive Effects of SARS-CoV-2 Infection Across the Lifespan</h3>
-      <p class="pc-desc">Examining the state of scientific evidence on how SARS-CoV-2 affects neurocognitive function across all age groups, with focus on military force readiness and veteran health implications.</p>
+      <p class="pc-desc">An ad hoc committee of the National Academies is examining the state of scientific evidence on the direct effects of SARS-CoV-2 infection on neurocognitive function across the lifespan — children, adolescents, working-aged adults, and older adults. The committee will also consider implications for military force readiness, military and veteran health, and health system planning.</p>
       <a href="https://www.nationalacademies.org/projects/CHPP-BHS-26-05" target="_blank" rel="noopener" class="pc-link">View Project →</a>
     </div>
   </div>
@@ -1730,7 +1801,7 @@ document.addEventListener('keydown', function(e) {
 
 <!-- TEACHING -->
 <section id="teaching">
-  <div class="sec-head" style="position:sticky;top:68px;z-index:50;background:var(--bg);padding-top:80px;padding-bottom:24px;margin-top:-80px;">
+  <div class="sec-head">
     <div class="section-label">Education</div>
     <h2 class="section-title">Teaching</h2>
     <div class="section-line"></div>
@@ -1738,44 +1809,44 @@ document.addEventListener('keydown', function(e) {
 
   <div class="teaching-grid">
     <div style="color:var(--text);font-family:Georgia,serif;font-size:1.05rem;line-height:1.8;">
-      <p style="margin-bottom:1.4em;">Teaching has been part of my life since long before I was formally a teacher. It started at the Franklin Institute in Philadelphia, where I volunteered in high school running public science shows and demonstrations. I enjoyed it enough that I eventually came back as a staff member, where I got more deeply involved in curriculum development and educational programming for schools and summer camps. That experience is where I learned two things I still carry into every classroom: that curiosity is contagious, and that good science communication means meeting every kind of learner where they are.</p>
+      <p style="margin-bottom:1.4em;">Teaching has been part of my life since long before I was formally a teacher. It started at the Franklin Institute in Philadelphia, where I walked in as a high school volunteer and ended up staying for more than twenty years. I did nearly every job the floor had: live science shows and demonstrations for the public, workshops built for visiting school groups, and eventually the overnight camp-in program &mdash; which I managed and then directed for a season, shepherding several hundred kids and their very tired chaperones through a museum after dark. It was the best informal-education training I could have asked for. You learn quickly how to read a room, how to find the version of an explanation that lands for a six-year-old and the version that lands for their skeptical parent, and that if you can't connect science to something a person already cares about, it doesn't stick. I still teach that way.</p>
       <p style="margin-bottom:1.4em;">I teach science as a process of discovery rather than a collection of facts to memorize. In my classroom, I want students to understand not only <em>what</em> is happening, but <em>why</em> — and how they can work through it themselves. I rely on guided discussion, Socratic questioning, collaborative activities, and real-world case studies. I also deliberately avoid anchoring my courses to a single textbook — drawing instead from primary literature, case studies, and open educational resources. As zero-cost course initiatives like Z-courses and OER adoption become more widespread, I believe removing textbook barriers is one of the most practical ways faculty can support equitable access to education.</p>
       <p style="margin-bottom:1.4em;">My teaching has spanned a wide range of learners — community college students returning to school after years away, undergraduates entering health professions, graduate and medical students, postdoctoral fellows, and neonatology fellows. At Rowan College at Burlington County, I run the Health and Human Microbiology course for health-profession students and also teach Biology I, Biology II, and Basic Microbiology. At Drexel University College of Medicine and Uniformed Services University, I lecture in microbiology, immunology, molecular pathogenesis, and vaccine development.</p>
-      <p style="color:var(--muted);font-size:0.95rem;font-style:italic;">Good teaching is not about simplifying material until it loses its depth. It's about presenting it with clarity, structure, and relevance — and making sure students feel supported enough to engage actively with challenging ideas.</p>
+      <p style="color:var(--muted);font-size:1.064rem;font-style:italic;">Good teaching is not about simplifying material until it loses its depth. It's about presenting it with clarity, structure, and relevance — and making sure students feel supported enough to engage actively with challenging ideas.</p>
     </div>
 
     <div>
       <div style="background:var(--card);border:1px solid var(--border);border-radius:4px;padding:32px;">
-        <h3 style="font-family:Arial,sans-serif;font-size:0.78rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin:0 0 24px;">Teaching &amp; Mentorship</h3>
+        <h3 style="font-family:Arial,sans-serif;font-size:0.874rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin:0 0 24px;">Teaching &amp; Mentorship</h3>
 
         <div style="margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);">
-          <div style="font-family:Georgia,serif;font-size:0.95rem;color:var(--text);margin-bottom:4px;">Microbiology, Immunology &amp; Vaccine Development</div>
-          <div style="font-family:Arial,sans-serif;font-size:0.8rem;color:var(--muted);">Drexel University College of Medicine &amp; Uniformed Services University</div>
+          <div style="font-family:Georgia,serif;font-size:1.064rem;color:var(--text);margin-bottom:4px;">Microbiology, Immunology &amp; Vaccine Development</div>
+          <div style="font-family:Arial,sans-serif;font-size:0.896rem;color:var(--muted);">Drexel University College of Medicine &amp; Uniformed Services University</div>
         </div>
 
         <div style="margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);">
-          <div style="font-family:Georgia,serif;font-size:0.95rem;color:var(--text);margin-bottom:4px;">Health &amp; Human Microbiology · Biology I &amp; II · Basic Microbiology</div>
-          <div style="font-family:Arial,sans-serif;font-size:0.8rem;color:var(--muted);">Rowan College at Burlington County</div>
+          <div style="font-family:Georgia,serif;font-size:1.064rem;color:var(--text);margin-bottom:4px;">Health &amp; Human Microbiology · Biology I &amp; II · Basic Microbiology</div>
+          <div style="font-family:Arial,sans-serif;font-size:0.896rem;color:var(--muted);">Rowan College at Burlington County</div>
         </div>
 
         <div style="margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);">
-          <div style="font-family:Georgia,serif;font-size:0.95rem;color:var(--text);margin-bottom:4px;">Instructor &amp; Curriculum Designer</div>
-          <div style="font-family:Arial,sans-serif;font-size:0.8rem;color:var(--muted);">Philadelphia University</div>
+          <div style="font-family:Georgia,serif;font-size:1.064rem;color:var(--text);margin-bottom:4px;">Instructor &amp; Curriculum Designer</div>
+          <div style="font-family:Arial,sans-serif;font-size:0.896rem;color:var(--muted);">Philadelphia University</div>
         </div>
 
         <div style="margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);">
-          <div style="font-family:Georgia,serif;font-size:0.95rem;color:var(--text);margin-bottom:4px;">Science Educator &amp; Program Developer</div>
-          <div style="font-family:Arial,sans-serif;font-size:0.8rem;color:var(--muted);">The Franklin Institute, Philadelphia</div>
+          <div style="font-family:Georgia,serif;font-size:1.064rem;color:var(--text);margin-bottom:4px;">Science Educator &amp; Program Developer</div>
+          <div style="font-family:Arial,sans-serif;font-size:0.896rem;color:var(--muted);">The Franklin Institute, Philadelphia</div>
         </div>
 
         <div style="margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);">
-          <div style="font-family:Georgia,serif;font-size:0.95rem;color:var(--text);margin-bottom:4px;">Teaching Assistant</div>
-          <div style="font-family:Arial,sans-serif;font-size:0.8rem;color:var(--muted);">University of the Sciences in Philadelphia</div>
+          <div style="font-family:Georgia,serif;font-size:1.064rem;color:var(--text);margin-bottom:4px;">Teaching Assistant</div>
+          <div style="font-family:Arial,sans-serif;font-size:0.896rem;color:var(--muted);">University of the Sciences in Philadelphia</div>
         </div>
 
         <div>
-          <div style="font-family:Georgia,serif;font-size:0.95rem;color:var(--text);margin-bottom:4px;">Graduate Student Association President</div>
-          <div style="font-family:Arial,sans-serif;font-size:0.8rem;color:var(--muted);">Drexel University College of Medicine (2 years)</div>
+          <div style="font-family:Georgia,serif;font-size:1.064rem;color:var(--text);margin-bottom:4px;">Graduate Student Association President</div>
+          <div style="font-family:Arial,sans-serif;font-size:0.896rem;color:var(--muted);">Drexel University College of Medicine (2 years)</div>
         </div>
       </div>
     </div>
@@ -1784,19 +1855,21 @@ document.addEventListener('keydown', function(e) {
 
 <!-- PUBLICATIONS -->
 <section id="publications">
-  <div class="sec-head" style="position:sticky;top:68px;z-index:50;background:var(--surface);padding-top:80px;padding-bottom:24px;margin-top:-80px;">
+  <div class="sec-head">
     <div class="section-label">Peer-Reviewed Work</div>
     <h2 class="section-title">Publications</h2>
     <div class="section-line"></div>
   </div>
 
-  <div class="pub-themes">
-    <span class="pub-theme">Respiratory Immunology</span>
-    <span class="pub-theme">Vaccinology</span>
-    <span class="pub-theme">Infectious Disease</span>
-    <span class="pub-theme">CD8+ T Cells</span>
-    <span class="pub-theme">Vaccine Safety</span>
-    <span class="pub-theme">Mucosal Immunity</span>
+  <div class="pub-themes" role="group" aria-label="Filter publications by topic">
+    <button type="button" class="pub-theme" data-th="resp" aria-pressed="false">Respiratory Immunology</button>
+    <button type="button" class="pub-theme" data-th="vacc" aria-pressed="false">Vaccinology</button>
+    <button type="button" class="pub-theme" data-th="infd" aria-pressed="false">Infectious Disease</button>
+    <button type="button" class="pub-theme" data-th="cd8" aria-pressed="false">CD8+ T Cells</button>
+    <button type="button" class="pub-theme" data-th="vsaf" aria-pressed="false">Vaccine Safety</button>
+    <button type="button" class="pub-theme" data-th="muc" aria-pressed="false">Mucosal Immunity</button>
+    <button type="button" class="pub-theme pub-theme-clear" data-th="" hidden>Clear filter</button>
+    <span class="pub-filter-status visually-hidden" role="status" aria-live="polite"></span>
   </div>
 
   <div class="pub-profiles">
@@ -1815,143 +1888,143 @@ document.addEventListener('keydown', function(e) {
   </div>
 
   <div class="pub-list">
-    <div class="pub-item">
+    <div class="pub-item" data-th="resp muc">
       <div class="pub-year">2026</div>
       <div>
         <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/42089286/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Myeloid TLR2 signaling amplifies immunopathology in influenza-infected murine neonates.</a></p>
         <p class="pub-authors">Rao AS, Onufer AP, <strong style="color:var(--gold);">Kumova O</strong>, Roberts LTN, Mossabeb R, Pascasio J, Carey AJ. · <em>American Journal of Respiratory Cell and Molecular Biology. 2026 Mar 16:aanag050.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Influenza</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Innate Immunity</span></div>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Influenza</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Innate Immunity</span></div>
       </div>
     </div>
-    <div class="pub-item">
+    <div class="pub-item" data-th="vacc infd muc">
       <div class="pub-year">2025</div>
       <div>
         <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/40971931/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Evaluation of immunization route in induction of vaccine-mediated anti-gonococcal immune responses in a murine model of ascending infection.</a></p>
         <p class="pub-authors">Matthias KA, Connolly KL, Jerse AE, <strong style="color:var(--gold);">Kumova OK</strong>, Macintyre AN, Gray MC, Thomas KS, Criss AK, Zielke RA, Li L, Sikora AE, Ramirez-Bencomo F, Thistlethwaite A, Derrick JP, Lu WE, Bash MC. · <em>Journal of Infectious Diseases. 2025;232(5):e765–e777.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Vaccinology</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Gonorrhea</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Mucosal Immunity</span></div>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Vaccinology</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Gonorrhea</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Mucosal Immunity</span></div>
       </div>
     </div>
-    <div class="pub-item">
+    <div class="pub-item" data-th="resp infd">
       <div class="pub-year">2025</div>
       <div>
         <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/40101750/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Cathelicidin-related antimicrobial peptide (CRAMP) is toxic during neonatal murine influenza virus infection.</a></p>
         <p class="pub-authors">Rao AS, Ugwu N, Onufer AP, <strong style="color:var(--gold);">Kumova O</strong>, Carey AJ. · <em>Journal of Immunology. 2025;214(5):1022–1031.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Influenza</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Antimicrobial Peptides</span></div>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Influenza</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Antimicrobial Peptides</span></div>
       </div>
     </div>
-    <div class="pub-item">
-      <div class="pub-year">2022</div>
-      <div>
-        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/36352099/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Severity of neonatal influenza infection is driven by type I interferon and oxidative stress.</a></p>
-        <p class="pub-authors"><strong style="color:var(--gold);">Kumova OK</strong>, Galani IE, Rao A, Johnson H, Triantafyllia V, Matt SM, Pascasio J, Gaskill PJ, Andreakos E, Katsikis PD, Carey AJ. · <em>Mucosal Immunology. 2022;15(6):1309–1320.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Influenza</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Type I Interferon</span></div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2022</div>
-      <div>
-        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/35204726/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Characterization of a novel regulator of biofilm formation in the pathogen Legionella pneumophila.</a></p>
-        <p class="pub-authors">Marin C, <strong style="color:var(--gold);">Kumova OK</strong>, Ninio S. · <em>Biomolecules. 2022;12(2):225.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Infectious Disease</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Legionella</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Biofilm</span></div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2021</div>
-      <div>
-        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/34445253/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Chitin-derived AVR-48 prevents experimental bronchopulmonary dysplasia and BPD-associated pulmonary hypertension in newborn mice.</a></p>
-        <p class="pub-authors">Das P, Acharya S, Prahaladan VM, <strong style="color:var(--gold);">Kumova OK</strong>, Malaeb S, Behera S, Agarwal B, Christensen DJ, Carey AJ, Bhandari V. · <em>International Journal of Molecular Sciences. 2021;22(16):8547.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Pulmonary Health</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Bronchopulmonary Dysplasia</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Disease</span></div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2021</div>
-      <div>
-        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/32303051/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">α1,3-Fucosyltransferase-IX, an enzyme of pulmonary endogenous lung stem cell marker SSEA-1, alleviates experimental bronchopulmonary dysplasia.</a></p>
-        <p class="pub-authors">Chaubey S, Nader YM, Shah D, <strong style="color:var(--gold);">Kumova OK</strong>, Prahaladan V, Carey AJ, Andersson S, Bhandari V. · <em>Pediatric Research. 2021;89(5):1126–1135.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Pulmonary Health</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Bronchopulmonary Dysplasia</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Stem Cells</span></div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2020</div>
-      <div>
-        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/32280045/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Adenosine deaminase-1 enhances germinal center formation and functional antibody responses to HIV-1 envelope DNA and protein vaccines.</a></p>
-        <p class="pub-authors">Gary E, O'Connor M, Chakhtoura M, Tardif V, <strong style="color:var(--gold);">Kumova OK</strong>, Malherbe DC, Sutton WF, Haigwood NL, Kutzler MA, Haddad EK. · <em>Vaccine. 2020;38(22):3821–3831.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Vaccinology</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">HIV</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Adjuvants</span></div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2019</div>
-      <div>
-        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/31603951/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Lung transcriptional unresponsiveness and loss of early influenza virus control in infected neonates is prevented by intranasal Lactobacillus rhamnosus GG.</a></p>
-        <p class="pub-authors"><strong style="color:var(--gold);">Kumova OK</strong>, Fike AJ, Thayer JL, Nguyen LT, Mell JC, Pascasio J, Stairiker C, Leon LG, Katsikis PD, Carey AJ. · <em>PLoS Pathogens. 2019;15(10):e1008072.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Influenza</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Probiotics</span></div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2019</div>
-      <div>
-        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/31260598/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Dissecting the defects in the neonatal CD8+ T-cell response.</a></p>
-        <p class="pub-authors">Fike AJ, <strong style="color:var(--gold);">Kumova OK</strong>, Carey AJ. · <em>Journal of Leukocyte Biology. 2019;106(5):1051–1061.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">CD8+ T Cells</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Adaptive Immunity</span></div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2019</div>
-      <div>
-        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/30536476/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Neonatal influenza-specific effector CTLs retain elevated CD31 levels at the site of infection and have decreased IFN-γ production.</a></p>
-        <p class="pub-authors">Fike AJ, <strong style="color:var(--gold);">Kumova OK</strong>, Tardif VJ, Carey AJ. · <em>Journal of Leukocyte Biology. 2019;105(3):539–549.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">CD8+ T Cells</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Influenza</span></div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2017</div>
-      <div>
-        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/29312340/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Public clonotypes and convergent recombination characterize the naïve CD8+ T-cell receptor repertoire of extremely preterm neonates.</a></p>
-        <p class="pub-authors">Carey AJ, Hope JL, Mueller YM, Fike AJ, <strong style="color:var(--gold);">Kumova OK</strong>, van Zessen DBH, Steegers EAP, van der Burg M, Katsikis PD. · <em>Frontiers in Immunology. 2017;8:1859.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">TCR Repertoire</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Preterm</span></div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2017</div>
-      <div>
-        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/28355204/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Characterization of CD31 expression on murine and human neonatal T lymphocytes during development and activation.</a></p>
-        <p class="pub-authors">Fike AJ, Nguyen LT, <strong style="color:var(--gold);">Kumova OK</strong>, Carey AJ. · <em>Pediatric Research. 2017;82(1):133–140.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">CD8+ T Cells</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">T Cell Development</span></div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2016</div>
-      <div>
-        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/27421957/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">A conserved OmpA-like protein in Legionella pneumophila required for efficient intracellular replication.</a></p>
-        <p class="pub-authors">Goodwin IP, <strong style="color:var(--gold);">Kumova OK</strong>, Ninio S. · <em>FEMS Microbiology Letters. 2016;363(16):fnw173.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Infectious Disease</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Legionella</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Pathogenesis</span></div>
-      </div>
-    </div>
-    <div class="pub-item">
-      <div class="pub-year">2016</div>
-      <div>
-        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/26873987/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Rapid Evolution of the CD8+ TCR Repertoire in Neonatal Mice.</a></p>
-        <p class="pub-authors">Carey AJ, Gracias DT, Thayer JL, Boesteanu AC, <strong style="color:var(--gold);">Kumova OK</strong>, Mueller YM, Hope JL, Fraietta JA, van Zessen DB, Katsikis PD. · <em>Journal of Immunology. 2016;196(6):2602–2611.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">CD8+ T Cells</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">TCR Repertoire</span></div>
-      </div>
-    </div>
-    <div class="pub-item">
+    <div class="pub-item" data-th="vsaf vacc">
       <div class="pub-year">2025</div>
       <div>
         <p class="pub-title"><a href="https://nap.nationalacademies.org/catalog/29240/vaccine-risk-monitoring-and-evaluation-at-the-centers-for-disease-control-and-prevention" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Vaccine Risk Monitoring and Evaluation at the Centers for Disease Control and Prevention.</a></p>
         <p class="pub-authors"><strong style="color:var(--gold);">Kumova OK</strong> — <em>Contributing Editor</em> · <em>National Academies of Sciences, Engineering, and Medicine. Washington, DC: The National Academies Press. 2025.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Vaccine Safety</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">CDC</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Science Policy</span></div>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Vaccine Safety</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">CDC</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Science Policy</span></div>
       </div>
     </div>
-    <div class="pub-item">
+    <div class="pub-item" data-th="vsaf vacc">
       <div class="pub-year">2024</div>
       <div>
         <p class="pub-title"><a href="https://nap.nationalacademies.org/catalog/27746/evidence-review-of-the-adverse-effects-of-covid-19-vaccination-and-intramuscular-vaccine-administration" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Evidence Review of the Adverse Effects of COVID-19 Vaccination and Intramuscular Vaccine Administration.</a></p>
         <p class="pub-authors"><strong style="color:var(--gold);">Kumova OK</strong> — <em>Contributing Editor</em> · <em>National Academies of Sciences, Engineering, and Medicine. Washington, DC: The National Academies Press. 2024.</em></p>
-        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Vaccine Safety</span></div>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Vaccine Safety</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">FDA</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Science Policy</span></div>
       </div>
     </div>
-  </div></div>
+      <div class="pub-item" data-th="resp muc infd">
+      <div class="pub-year">2022</div>
+      <div>
+        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/36352099/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Severity of neonatal influenza infection is driven by type I interferon and oxidative stress.</a></p>
+        <p class="pub-authors"><strong style="color:var(--gold);">Kumova OK</strong>, Galani IE, Rao A, Johnson H, Triantafyllia V, Matt SM, Pascasio J, Gaskill PJ, Andreakos E, Katsikis PD, Carey AJ. · <em>Mucosal Immunology. 2022;15(6):1309–1320.</em></p>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Influenza</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Type I Interferon</span></div>
+      </div>
+    </div>
+    <div class="pub-item" data-th="infd">
+      <div class="pub-year">2022</div>
+      <div>
+        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/35204726/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Characterization of a novel regulator of biofilm formation in the pathogen Legionella pneumophila.</a></p>
+        <p class="pub-authors">Marin C, <strong style="color:var(--gold);">Kumova OK</strong>, Ninio S. · <em>Biomolecules. 2022;12(2):225.</em></p>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Infectious Disease</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Legionella</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Biofilm</span></div>
+      </div>
+    </div>
+    <div class="pub-item" data-th="resp">
+      <div class="pub-year">2021</div>
+      <div>
+        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/34445253/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Chitin-derived AVR-48 prevents experimental bronchopulmonary dysplasia and BPD-associated pulmonary hypertension in newborn mice.</a></p>
+        <p class="pub-authors">Das P, Acharya S, Prahaladan VM, <strong style="color:var(--gold);">Kumova OK</strong>, Malaeb S, Behera S, Agarwal B, Christensen DJ, Carey AJ, Bhandari V. · <em>International Journal of Molecular Sciences. 2021;22(16):8547.</em></p>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Pulmonary Health</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Bronchopulmonary Dysplasia</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Disease</span></div>
+      </div>
+    </div>
+    <div class="pub-item" data-th="resp">
+      <div class="pub-year">2021</div>
+      <div>
+        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/32303051/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">α1,3-Fucosyltransferase-IX, an enzyme of pulmonary endogenous lung stem cell marker SSEA-1, alleviates experimental bronchopulmonary dysplasia.</a></p>
+        <p class="pub-authors">Chaubey S, Nader YM, Shah D, <strong style="color:var(--gold);">Kumova OK</strong>, Prahaladan V, Carey AJ, Andersson S, Bhandari V. · <em>Pediatric Research. 2021;89(5):1126–1135.</em></p>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Pulmonary Health</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Bronchopulmonary Dysplasia</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Stem Cells</span></div>
+      </div>
+    </div>
+    <div class="pub-item" data-th="vacc">
+      <div class="pub-year">2020</div>
+      <div>
+        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/32280045/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Adenosine deaminase-1 enhances germinal center formation and functional antibody responses to HIV-1 envelope DNA and protein vaccines.</a></p>
+        <p class="pub-authors">Gary E, O'Connor M, Chakhtoura M, Tardif V, <strong style="color:var(--gold);">Kumova OK</strong>, Malherbe DC, Sutton WF, Haigwood NL, Kutzler MA, Haddad EK. · <em>Vaccine. 2020;38(22):3821–3831.</em></p>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Vaccinology</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">HIV</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Adjuvants</span></div>
+      </div>
+    </div>
+    <div class="pub-item" data-th="resp muc infd">
+      <div class="pub-year">2019</div>
+      <div>
+        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/31603951/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Lung transcriptional unresponsiveness and loss of early influenza virus control in infected neonates is prevented by intranasal Lactobacillus rhamnosus GG.</a></p>
+        <p class="pub-authors"><strong style="color:var(--gold);">Kumova OK</strong>, Fike AJ, Thayer JL, Nguyen LT, Mell JC, Pascasio J, Stairiker C, Leon LG, Katsikis PD, Carey AJ. · <em>PLoS Pathogens. 2019;15(10):e1008072.</em></p>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Influenza</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Probiotics</span></div>
+      </div>
+    </div>
+    <div class="pub-item" data-th="cd8">
+      <div class="pub-year">2019</div>
+      <div>
+        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/31260598/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Dissecting the defects in the neonatal CD8+ T-cell response.</a></p>
+        <p class="pub-authors">Fike AJ, <strong style="color:var(--gold);">Kumova OK</strong>, Carey AJ. · <em>Journal of Leukocyte Biology. 2019;106(5):1051–1061.</em></p>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">CD8+ T Cells</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Adaptive Immunity</span></div>
+      </div>
+    </div>
+    <div class="pub-item" data-th="cd8 resp">
+      <div class="pub-year">2019</div>
+      <div>
+        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/30536476/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Neonatal influenza-specific effector CTLs retain elevated CD31 levels at the site of infection and have decreased IFN-γ production.</a></p>
+        <p class="pub-authors">Fike AJ, <strong style="color:var(--gold);">Kumova OK</strong>, Tardif VJ, Carey AJ. · <em>Journal of Leukocyte Biology. 2019;105(3):539–549.</em></p>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">CD8+ T Cells</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Influenza</span></div>
+      </div>
+    </div>
+    <div class="pub-item" data-th="cd8">
+      <div class="pub-year">2017</div>
+      <div>
+        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/29312340/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Public clonotypes and convergent recombination characterize the naïve CD8+ T-cell receptor repertoire of extremely preterm neonates.</a></p>
+        <p class="pub-authors">Carey AJ, Hope JL, Mueller YM, Fike AJ, <strong style="color:var(--gold);">Kumova OK</strong>, van Zessen DBH, Steegers EAP, van der Burg M, Katsikis PD. · <em>Frontiers in Immunology. 2017;8:1859.</em></p>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">TCR Repertoire</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Preterm</span></div>
+      </div>
+    </div>
+    <div class="pub-item" data-th="cd8">
+      <div class="pub-year">2017</div>
+      <div>
+        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/28355204/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Characterization of CD31 expression on murine and human neonatal T lymphocytes during development and activation.</a></p>
+        <p class="pub-authors">Fike AJ, Nguyen LT, <strong style="color:var(--gold);">Kumova OK</strong>, Carey AJ. · <em>Pediatric Research. 2017;82(1):133–140.</em></p>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">CD8+ T Cells</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">T Cell Development</span></div>
+      </div>
+    </div>
+    <div class="pub-item" data-th="infd">
+      <div class="pub-year">2016</div>
+      <div>
+        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/27421957/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">A conserved OmpA-like protein in Legionella pneumophila required for efficient intracellular replication.</a></p>
+        <p class="pub-authors">Goodwin IP, <strong style="color:var(--gold);">Kumova OK</strong>, Ninio S. · <em>FEMS Microbiology Letters. 2016;363(16):fnw173.</em></p>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Infectious Disease</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Legionella</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Pathogenesis</span></div>
+      </div>
+    </div>
+    <div class="pub-item" data-th="cd8">
+      <div class="pub-year">2016</div>
+      <div>
+        <p class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/26873987/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.15s,color 0.15s;">Rapid Evolution of the CD8+ TCR Repertoire in Neonatal Mice.</a></p>
+        <p class="pub-authors">Carey AJ, Gracias DT, Thayer JL, Boesteanu AC, <strong style="color:var(--gold);">Kumova OK</strong>, Mueller YM, Hope JL, Fraietta JA, van Zessen DB, Katsikis PD. · <em>Journal of Immunology. 2016;196(6):2602–2611.</em></p>
+        <div style="margin-top:8px;"><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">Neonatal Immunity</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">CD8+ T Cells</span><span style="display:inline-block;font-family:Arial,sans-serif;font-size:0.767rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);padding:2px 8px;border-radius:2px;margin:4px 4px 0 0;">TCR Repertoire</span></div>
+      </div>
+    </div>
+</div></div>
   </div>
 </section>
 
@@ -2043,8 +2116,8 @@ document.addEventListener('keydown', function(e) {
 /* ─────────── EN / TR language system ─────────── */
 var RESEARCH_DATA_TR = [{"num": "Proje 02", "title": "Aşı Güvenliği Kanıt Sentezi", "inst": "National Academies of Sciences, Engineering, and Medicine · Program Sorumlusu", "desc": "NASEM bünyesindeki Center for Health, People, and Places'in Biomedical and Health Sciences Program Alanında Program Sorumlusu olarak, aşı güvenliği, izleme sistemleri ile asker ve gazi sağlığı konularında yürütülen yüksek etkili uzlaşı çalışmalarını destekliyorum; bu çalışmalar CDC, VA, DoD ve FDA gibi federal kurumlar tarafından talep edilmektedir. Görevim uzman komite üyelerinin belirlenmesini, karmaşık immünolojik ve epidemiyolojik kanıtların sentezlenmesini, kamuya açık oturumlar ile kapalı müzakerelerin koordinasyonunu ve ortaya çıkan uzlaşı raporlarının yazımını kapsıyor. Ayrıca bu bulgulara dayanan Kongre brifinglerini hazırlayıp sundum."}, {"num": "Proje 03", "title": "Gonore Aşısı Geliştirme", "inst": "FDA Office of Vaccines Research and Review · Doktora Sonrası Araştırmacı", "desc": "Neisseria gonorrhoeae dünya genelinde her yıl tahmini 82 milyon yeni enfeksiyona yol açıyor ve tedavisinde kullanılan neredeyse her antibiyotiğe karşı direnç geliştirmiş durumda — buna rağmen ruhsatlı bir aşısı bulunmuyor. FDA'nın Office of Vaccines Research and Review birimindeki doktora sonrası araştırmam sırasında, gonoreye karşı lipozom ve dış membran vezikülü (OMV) temelli aşı adayları geliştirdim ve değerlendirdim. Aşıyla uyarılan antikor yanıtlarını karakterize etmek için immünoloji testleri tasarladım, fare çıkan enfeksiyon modellerinde intrarektal ve intravajinal bağışıklama yollarını karşılaştırdım ve yeni gonokok aşılarının düzenleyici değerlendirmesine yönelik bilimsel çerçeveye katkıda bulundum."}, {"num": "Proje 04", "title": "Yenidoğan Bağışıklığının Probiyotiklerle Modülasyonu", "inst": "Drexel University College of Medicine · Doktora", "desc": "Yenidoğanlardaki bağışıklık kusurlarına ilişkin bilgimizin üzerine giderek, probiyotik uygulamasının erken antiviral bağışıklığı yeniden kurup kuramayacağını sorduk. Yenidoğan farelerde influenza ile karşılaşmadan önce intranazal yolla verilen Lactobacillus rhamnosus GG (LGG), viral kontrolü belirgin biçimde iyileştirdi — yenidoğan akciğerindeki transkripsiyonel yanıtsızlığı tersine çevirerek daha etkili erken bağışıklık yanıtlarına olanak tanıdı. Bu çalışma PLoS Pathogens dergisinde birinci isim olarak yayımlandı ve yenidoğan solunum yolu hastalıklarının şiddetini azaltmaya yönelik olası bir translasyonel stratejiyi ortaya koydu."}, {"num": "Proje 01", "title": "Yenidoğan CD8+ T Hücre Biyolojisi", "inst": "Drexel University College of Medicine · İmmünoloji ve Mikrobiyoloji Doktorası", "desc": "Pediatrik enfeksiyon hastalıklarının merkezinde duran bir soru: sağlıklı yetişkinlerin kolayca temizlediği viral enfeksiyonları yenidoğanlar neden kontrol edemiyor? Doktora çalışmam, viral enfeksiyona karşı ön saftaki efektörler olan yenidoğan CD8+ T hücrelerindeki içsel immünolojik kusurları sistematik biçimde ele aldı. Yenidoğanlarda tam CD8+ T hücre aktivasyonunun önündeki transkripsiyonel ve epigenetik engelleri belirledik, bu hücrelerin kendine özgü efektör bellek eğilimini karakterize ettik, prematüre yenidoğanlarda klonal genişleme ile ortak klonotiplerin dinamiklerini tanımladık ve CD31'in yenidoğan T lenfosit göçündeki rolünü inceledik. Bu çalışmalar bütünü çok sayıda hakemli yayın üretti ve doktora tezimin temelini oluşturdu."}, {"num": "Proje 06", "title": "Prematüre Yenidoğanlarda T Hücre Repertuvarı", "inst": "Drexel University College of Medicine · Doktora", "desc": "Aşırı prematüre bebekler ciddi enfeksiyon açısından özellikle yüksek risk taşır; ancak bu kırılganlığın T hücre reseptörü düzeyindeki immünolojik temeli iyi anlaşılmamıştı. Aşırı prematüre insan yenidoğanlarının naif CD8+ T hücre reseptörü (TCR) repertuvarını yüksek verimli dizileme ile karakterize ettik ve yakınsak rekombinasyon ile paylaşılan ortak klonotipler saptadık — bu da olgunlaşmamış bir bağışıklık sisteminin bile korunmuş TCR dizilerini seçtiğini düşündürüyor. Bulgular, en kırılgan yenidoğan hastalar için hedefe yönelik immünolojik destek stratejilerinin önünü açıyor."}, {"num": "Proje 05", "title": "Legionella Patogenezi", "inst": "Drexel University College of Medicine · Enfeksiyon Hastalıkları Yüksek Lisansı", "desc": "Dr. Shira Ninio'nun laboratuvarında yürüttüğüm yüksek lisans araştırmam, Lejyoner hastalığının etkeni olan Legionella pneumophila'nın moleküler virülans mekanizmalarına odaklandı. Konak makrofajlar içinde etkin hücre içi replikasyon için gerekli olan, korunmuş bir OmpA benzeri dış membran proteinini karakterize ettim ve biyofilm oluşumundan sorumlu genetik unsurları belirlemek üzere bir transpozon insersiyon kütüphanesi oluşturdum. Bakteriyel patogenez alanındaki bu temel çalışma, daha sonra doktora düzeyindeki immünoloji araştırmalarımı besleyen moleküler biyoloji ve mikrobiyoloji becerilerini kazandırdı."}];
 
-var I18N_INDEXED = {".nav-brand": ["Dr. Ogan K. Kumova"], ".hero-eyebrow": ["Program Sorumlusu · <span lang=\"en\">National Academies</span>"], ".hero-name": ["<span style=\"font-size:0.42em;letter-spacing:4px;color:var(--muted);font-family:Arial,sans-serif;text-transform:uppercase;display:block;margin-bottom:6px;\">Dr.</span>Ogan K.<br><em>Kumova</em>"], ".hero-desc": ["İmmünolojik kanıtlar ile ulusal halk sağlığı karar alma süreçleri arasında köprü kurmak — laboratuvar tezgâhından Kongre'ye."], ".about-bio p": ["Altı yaşımdan beri özünde bir bilim insanıyım — ilk mikroskobumu ve her ay kapaktan kapağa okuduğum <em>Discovery Kids</em> dergisinin aboneliğini aldığım yaştan beri. Türkiye'de her şeyi sorgulayarak büyüdüm; o merak hiçbir zaman sönmedi.", "Ailem ortaokulun sonunda Amerika Birleşik Devletleri'ne taşındı. Liseyi New Jersey'de bitirdim ve açılan her fen dersine bir şekilde yolumu düşürdüm. O yıllarda Philadelphia'daki Franklin Institute'ta gönüllü olarak çalışmaya başladım ve kendimle ilgili önemli bir şey fark ettim: bilimi öğrenmeyi sevdiğim kadar anlatmayı da seviyordum.", "Bu birleşim beni Philadelphia'daki University of the Sciences'a götürdü; burada Biyokimya ve Biyoenformatik alanlarında çift lisans derecesi aldım. Mezuniyetin ardından Philadelphia University'de ders verdim, müfredat tasarımına katkıda bulundum ve Franklin Institute'ta bilim eğitimi çalışmalarımı sürdürdüm — ta ki içimdeki araştırmacı ağır basana kadar.", "<a href=\"https://drexel.edu/medicine/academics/graduate-programs/microbiology-immunology/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);\"><span lang=\"en\">Drexel University College of Medicine</span></a>'daki lisansüstü eğitimim beni <em>Legionella pneumophila</em>'nın moleküler mekanizmalarından çok daha derin bir soruya taşıdı: yenidoğanlar immünolojik olarak neden bu kadar savunmasız? <a href=\"https://drexel.edu/medicine/about/departments/microbiology-immunology/research/the-carey-lab/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);\">Alison J. Carey, MD'nin laboratuvarında</a> yürüttüğüm doktora çalışmam, Amedeo Bondi Araştırmada Mükemmellik Ödülü ile Dekanlık İşbirlikçi Araştırma Mükemmellik Ödülü'nü kazandı ve beni 2016 NIH Klinik ve Translasyonel Araştırma Kohortu'na dâhil etti.", "Ardından FDA'nın Office of Vaccines Research and Review biriminde doktora sonrası araştırmacı olarak görev aldım; burada federal düzenleyici bilim çerçevesinde <em>Neisseria gonorrhoeae</em>'ye karşı yeni aşı adayları geliştirdim. Oradan <span lang=\"en\">National Academies</span> of Sciences, Engineering, and Medicine'a geçtim; burada CDC, VA, DoD ve FDA tarafından talep edilen yüksek etkili kanıt değerlendirmelerini destekliyor, karmaşık immünolojik bilgiyi ulusal halk sağlığı politikasını şekillendiren önerilere dönüştürüyorum.", "Çocukluğumdaki bir mikroskopla başlayan merak hâlâ itici güç. Sadece sorular büyüdü."], ".timeline-place": ["<span lang=\"en\">National Academies</span> of Sciences, Engineering, and Medicine", "<span lang=\"en\">FDA Office of Vaccine Research</span> &amp; Review", "<span lang=\"en\">Drexel University College of Medicine</span>", "<span lang=\"en\">Drexel University</span>"], ".rc-inst": ["NASEM · Program Sorumlusu", "<span lang=\"en\">FDA Office of Vaccine Research</span> · Doktora Sonrası", "<span lang=\"en\">Drexel University College of Medicine</span> · Doktora", "<span lang=\"en\">Drexel University College of Medicine</span> · Doktora", "<span lang=\"en\">Drexel / Frontiers in Immunology</span> · Doktora", "<span lang=\"en\">Drexel University</span> · Yüksek Lisans"], ".rc-title": ["Aşı Güvenliği Kanıt Sentezi", "Gonore Aşısı Geliştirme", "Yenidoğan Bağışıklığının Probiyotiklerle Modülasyonu", "Yenidoğan CD8+ T Hücre Biyolojisi", "Prematüre Yenidoğanlarda T Hücre Repertuvarı", "Legionella Patogenezi"], ".rc-desc": ["CDC, VA, DoD ve FDA tarafından talep edilen, aşı güvenliğine ilişkin kapsamlı uzman uzlaşı çalışmalarını yürütür; karmaşık immünolojik kanıtları uygulanabilir ulusal politika önerilerine dönüştürür.", "FDA'nın düzenleyici bilim çerçevesi içinde <em>Neisseria gonorrhoeae</em>'ye karşı lipozom ve dış membran vezikülü temelli aşı adayları geliştirdi; fare çıkan enfeksiyon modellerinde uygulama yollarını ve immünojenisiteyi değerlendirdi.", "İntranazal <em>Lactobacillus rhamnosus</em> GG uygulamasının yenidoğanlardaki bağışıklık kusurlarını giderip gideremeyeceğini ve influenza enfeksiyonu sırasında erken viral kontrolü yeniden sağlayıp sağlayamayacağını araştırdı — <em>PLoS Pathogens</em>'ta yayımlandı.", "Yenidoğanlar viral enfeksiyonları neden kontrol edemiyor? Yenidoğan CD8+ T hücrelerindeki içsel kusurları — transkripsiyonel yeniden programlanmadan klonal dinamiklere kadar — fare ve insan modellerinde inceledi.", "Aşırı prematüre yenidoğanların naif CD8+ T hücre reseptörü repertuvarını karakterize ederek yakınsak rekombinasyonu ve ortak (public) klonotipleri gösterdi — prematüre bebeklerin neden daha yüksek enfeksiyon riski taşıdığına ışık tuttu.", "Dr. Shira Ninio'nun laboratuvarında <em>Legionella pneumophila</em>'nın virülans faktörlerini ve biyofilm oluşumunu inceledi; etkin hücre içi replikasyon için gerekli olan OmpA benzeri bir proteini karakterize etti."], ".policy-intro-text": ["<a href=\"https://www.nationalacademies.org\" target=\"_blank\" rel=\"noopener\"><span lang=\"en\">National Academies</span> of Sciences, Engineering, and Medicine</a> bünyesinde Program Sorumlusu olarak, <a href=\"https://www.nationalacademies.org/units/CHPP-CHPP%20EO-25-P-703\" target=\"_blank\" rel=\"noopener\">Center for Health, People, and Places (CHPP)</a> çatısı altındaki <a href=\"https://www.nationalacademies.org/units/CHPP-BHS-25-P-704\" target=\"_blank\" rel=\"noopener\">Biomedical and Health Sciences (BHS) Program Alanı</a>nda çalışıyorum. Burada immünoloji ve aşı bilimi alanındaki uzmanlığımı, aşı güvenliği, izleme sistemleri ile asker ve gazi sağlığı konularındaki uzman uzlaşı çalışmalarını desteklemek için kullanıyorum — bu çalışmalar CDC, VA, DoD ve FDA tarafından talep edilmektedir. Bu iş, bilimsel kanıt ile en üst düzeydeki halk sağlığı karar alma süreçleri arasında köprü kuruyor."], ".pc-title": ["Nörodejeneratif Sonuçlar ve Seçilmiş Askerî Maruziyetler", "SARS-CoV-2 Enfeksiyonunun Yaşam Boyu Doğrudan Nörobilişsel Etkileri", "Vaccine Risk Monitoring and Evaluation at the Centers for Disease Control and Prevention", "Evidence Review of the Adverse Effects of COVID-19 Vaccination and Intramuscular Vaccine Administration"], ".pc-desc": ["Altı askerî hizmet maruziyet kategorisini (pestisitler, jet yakıtları, çözücüler, ağır metaller, PFAS ve partikül madde) Körfez Savaşı ve 11 Eylül sonrası gazilerdeki nörodejeneratif hastalıklarla ilişkilendiren kanıtların sistematik derlemesi.", "SARS-CoV-2'nin tüm yaş gruplarında nörobilişsel işlevi nasıl etkilediğine dair bilimsel kanıtların durumunu, askerî hazırlık ve gazi sağlığı açısından taşıdığı sonuçlara odaklanarak inceliyor.", "CDC'nin aşı güvenliği izleme sistemlerinin ve altyapısının derinlemesine değerlendirilmesi; mevcut uygulamaları inceleyerek ulusal aşı risk gözetimini güçlendirmeye yönelik öneriler sunar.", "COVID-19 aşıları ve kas içi aşı uygulamasıyla ilişkili advers etkileri inceleyen kapsamlı bir kanıt derlemesi; federal sağlık kurumları için aşı güvenliği politikasına yön vermek üzere hazırlanmıştır."], ".briefing-text": ["<em>Vaccine Risk Monitoring and Evaluation at the Centers for Disease Control and Prevention</em> raporu üzerine, ABD Temsilciler Meclisi ve Senato Ödenek Komiteleri ile Senato HELP Komitesi personeline yönelik davetli bir brifing hazırladı.", "<em>COVID-19 aşı güvenliği</em> üzerine, ABD Temsilciler Meclisi ve Senato Ödenek Komiteleri ile Senato HELP Komitesi personeline yönelik davetli bir brifing hazırladı."], "#teaching .teaching-grid > div:first-child > p": ["Öğretmenlik, resmen öğretmen olmamdan çok önce hayatımın bir parçasıydı. Philadelphia'daki Franklin Institute'ta lise yıllarımda gönüllü olarak halka açık bilim gösterileri ve deneyler yaparak başladı. Bundan o kadar keyif aldım ki sonradan kadrolu olarak geri döndüm; orada okullar ve yaz kampları için müfredat geliştirme ve eğitim programlarıyla daha yakından ilgilendim. Bugün hâlâ her sınıfa taşıdığım iki şeyi orada öğrendim: merak bulaşıcıdır ve iyi bilim iletişimi, her tür öğrenene kendi bulunduğu yerden ulaşmak demektir.", "Bilimi ezberlenecek bir bilgi yığını olarak değil, bir keşif süreci olarak öğretiyorum. Sınıfımda öğrencilerin yalnızca <em>ne</em> olduğunu değil, <em>neden</em> olduğunu ve bunu kendi başlarına nasıl çözebileceklerini anlamalarını istiyorum. Yönlendirilmiş tartışma, Sokratik sorgulama, işbirlikçi etkinlikler ve gerçek yaşamdan vaka çalışmalarına dayanıyorum. Ayrıca derslerimi bilinçli olarak tek bir ders kitabına bağlamıyorum; bunun yerine birincil literatürden, vaka çalışmalarından ve açık eğitim kaynaklarından yararlanıyorum. Z-course ve OER gibi sıfır maliyetli ders girişimleri yaygınlaştıkça, ders kitabı engelini kaldırmanın öğretim üyelerinin eğitimde eşit erişimi desteklemek için atabileceği en pratik adımlardan biri olduğuna inanıyorum.", "Öğrettiğim kitle çok geniş bir yelpazeye yayıldı: yıllar sonra okula dönen meslek yüksek okulu öğrencileri, sağlık mesleklerine hazırlanan lisans öğrencileri, lisansüstü ve tıp öğrencileri, doktora sonrası araştırmacılar ve neonatoloji yandal öğrencileri. Rowan College at Burlington County'de sağlık meslekleri öğrencileri için Sağlık ve İnsan Mikrobiyolojisi dersini yürütüyor, ayrıca Biyoloji I, Biyoloji II ve Temel Mikrobiyoloji dersleri veriyorum. <span lang=\"en\">Drexel University College of Medicine</span> ve Uniformed Services University'de mikrobiyoloji, immünoloji, moleküler patogenez ve aşı geliştirme konularında ders anlatıyorum.", "İyi öğretmenlik, konuyu derinliğini yitirene kadar basitleştirmek değildir. Konuyu açıklıkla, düzenle ve bağlamla sunmak — ve öğrencilerin zorlu fikirlerle aktif biçimde uğraşacak kadar desteklendiklerini hissetmelerini sağlamaktır."], "#teaching h3": ["Öğretim ve Mentorluk"], "#teaching .teaching-grid > div:last-child > div > div > div": ["Mikrobiyoloji, İmmünoloji ve Aşı Geliştirme", "<span lang=\"en\">Drexel University College of Medicine</span> &amp; Uniformed Services University", "Sağlık ve İnsan Mikrobiyolojisi · Biyoloji I &amp; II · Temel Mikrobiyoloji", "Rowan College at Burlington County", "Öğretim Görevlisi ve Müfredat Tasarımcısı", "Philadelphia University", "Bilim Eğitmeni ve Program Geliştirici", "The Franklin Institute, Philadelphia", "Öğretim Asistanı", "University of the Sciences in Philadelphia", "Lisansüstü Öğrenci Derneği Başkanı", "<span lang=\"en\">Drexel University College of Medicine</span> (2 yıl)"], ".cv-desc": ["Tam akademik özgeçmişim ile akademi, kamu ve özel sektör pozisyonlarına yönelik hedefli özgeçmişlerime aşağıdan ulaşabilirsiniz."], ".contact-intro": ["Meslektaşlarımla, olası iş birlikçilerle ve aşı bilimi, immünoloji ya da bilim politikasına ilgi duyan herkesle tanışmaktan her zaman memnuniyet duyarım. İş birliği, ortak ilgi alanları ve yeni yönelimler üzerine konuşmaya açığım."], "#cf2-submit": ["Mesaj Gönder"], "#cf2-success": ["Ulaştığınız için teşekkürler — en kısa sürede size döneceğim."], "#rm-pubs-label": ["Öne Çıkan Yayınlar"], "footer span:first-child": ["© 2025 Dr. Ogan K. Kumova"]};
-var I18N_PHRASES = {"About": "Hakkımda", "Research": "Araştırma", "Policy": "Politika", "Teaching": "Öğretim", "Publications": "Yayınlar", "CV": "Özgeçmiş", "Contact": "İletişim", "Vaccine Science": "Aşı Bilimi", "Immunology": "İmmünoloji", "Science Policy": "Bilim Politikası", "Explore Research": "Araştırmaları İncele", "Get in Touch": "İletişime Geç", "Peer-Reviewed Publications": "Hakemli Yayın", "Years Translational Research": "Yıllık Translasyonel Araştırma", "Congressional Briefings": "Kongre Brifingi", "Background": "Geçmiş", "Science": "Bilim", "National Academies": "<span lang=\"en\">National Academies</span>", "Education": "Eğitim", "Peer-Reviewed Work": "Hakemli Çalışmalar", "Documents": "Belgeler", "About Me": "Hakkımda", "Policy Work": "Politika Çalışmaları", "Curriculum Vitae": "Özgeçmiş", "2023 – Present": "2023 – Günümüz", "2020 – 2023": "2020 – 2023", "2015 – 2020": "2015 – 2020", "2013 – 2015": "2013 – 2015", "Program Officer": "Program Sorumlusu", "Postdoctoral Fellow": "Doktora Sonrası Araştırmacı", "PhD — Immunology & Microbiology": "Doktora — İmmünoloji ve Mikrobiyoloji", "MS — Microbiology & Immunology": "Yüksek Lisans — Mikrobiyoloji ve İmmünoloji", "+ Expand": "+ Detay", "Research Profiles": "Araştırma Profilleri", "Current & Ongoing Projects": "Devam Eden Projeler", "Published Reports": "Yayımlanan Raporlar", "Congressional Briefings ": "Kongre Brifingleri", "View Project →": "Projeyi Görüntüle →", "View Report →": "Raporu Görüntüle →", "Interactive: COVID-19 Vaccine Adverse Effects →": "İnteraktif: COVID-19 Aşısının Advers Etkileri →", "Interactive: Shoulder Injuries →": "İnteraktif: Omuz Yaralanmaları →", "October 2025": "Ekim 2025", "May 2024": "Mayıs 2024", "VA · DoD": "VA · DoD", "DoD": "DoD", "2025 · CDC": "2025 · CDC", "2024 · FDA": "2024 · FDA", "Respiratory Immunology": "Solunum İmmünolojisi", "Vaccinology": "Vaksinoloji", "Infectious Disease": "Enfeksiyon Hastalıkları", "CD8+ T Cells": "CD8+ T Hücreleri", "Vaccine Safety": "Aşı Güvenliği", "Mucosal Immunity": "Mukozal Bağışıklık", "Adaptive Immunity": "Adaptif Bağışıklık", "Adjuvants": "Adjuvanlar", "Antimicrobial Peptides": "Antimikrobiyal Peptitler", "Biofilm": "Biyofilm", "Bronchopulmonary Dysplasia": "Bronkopulmoner Displazi", "CDC": "CDC", "Gonorrhea": "Gonore", "HIV": "HIV", "Influenza": "İnfluenza", "Innate Immunity": "Doğal Bağışıklık", "Legionella": "Legionella", "Neonatal Disease": "Yenidoğan Hastalıkları", "Neonatal Immunity": "Yenidoğan Bağışıklığı", "Pathogenesis": "Patogenez", "Preterm": "Prematürite", "Probiotics": "Probiyotikler", "Pulmonary Health": "Akciğer Sağlığı", "Stem Cells": "Kök Hücreler", "T Cell Development": "T Hücre Gelişimi", "TCR Repertoire": "TCR Repertuvarı", "Type I Interferon": "Tip I İnterferon", "Full CV": "Tam Özgeçmiş", "Academic": "Akademik", "Research Resume": "Araştırma Özgeçmişi", "Bench & Translational": "Laboratuvar ve Translasyonel", "Science Policy Resume": "Bilim Politikası Özgeçmişi", "Policy & Federal": "Politika ve Federal", "Teaching Resume": "Öğretim Özgeçmişi", "Education Roles": "Eğitim Görevleri", "ORCID Profile": "ORCID Profili", "Skip to content": "\u0130\u00e7eri\u011fe ge\u00e7"};
+var I18N_INDEXED = {".nav-brand": ["Dr. Ogan K. Kumova"], ".hero-eyebrow": ["Program Sorumlusu · <span lang=\"en\">National Academies</span>"], ".hero-name": ["<span style=\"font-size:0.42em;letter-spacing:4px;color:var(--muted);font-family:Arial,sans-serif;text-transform:uppercase;display:block;margin-bottom:6px;\">Dr.</span>Ogan K.<br><em>Kumova</em>"], ".hero-desc": ["İmmünolojik kanıtlar ile ulusal halk sağlığı karar alma süreçleri arasında köprü kurmak — laboratuvar tezgâhından Kongre'ye."], ".about-bio p": ["Altı yaşımdan beri özünde bir bilim insanıyım — ilk mikroskobumu ve her ay kapaktan kapağa okuduğum, sonra bir daha okuduğum <em>Discovery Kids</em> aboneliğimi aldığım yaştan beri. Türkiye'de <em>neden</em> diye bir fazla soran çocuk olarak büyüdüm. Kimse bundan vazgeçirmeyi başaramadı.", "Ortaokulun sonunda Amerika Birleşik Devletleri'ne taşındık. Liseyi New Jersey'de bitirdim ve programın izin verdiği her fen dersine bir şekilde girdim. Aşağı yukarı aynı dönemde Philadelphia'daki Franklin Institute'ta gönüllü olarak çalışmaya başladım; kendimle ilgili, yıllar sonra tam anlamıyla hayata geçirebildiğim bir şeyi orada öğrendim: bilimi yapmayı sevdiğim kadar anlatmayı da seviyorum. Sekiz yaşındaki bir salon dolusu çocuğun kafasında bir şeyin yerine oturduğu anı izlemek, kendi başına bir sonuçtur.", "Bu birleşim beni Philadelphia'daki University of the Sciences'a götürdü; burada Biyokimya ve Biyoenformatik alanlarında çift lisans derecesi aldım. Ardından Philadelphia University'de ders verdim, müfredat tasarladım ve Franklin Institute'ta bilim eğitimi çalışmalarımı sürdürdüm — yirmi yılı aşan bir bağ oldu bu. Bir süre kariyerimin tamamı bu olur diye düşündüm. Sonra içimdeki araştırmacı sesini yükseltti.", "Laboratuvara dönüş hızlı oldu. <a href=\"https://drexel.edu/medicine/academics/graduate-programs/microbiology-immunology/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);\"><span lang=\"en\">Drexel University College of Medicine</span></a>’e laboratuvar teknisyeni olarak döndüm ve <em>Legionella pneumophila</em> üzerine çalıştım — biyofilm düzenlenmesi, OmpA benzeri proteinler ve bir patojenin insan hücresi içinde yaşamak için kullandığı sessiz mekanizmalar. Bunu tam zamanlı yaparken aynı anda Enfeksiyon Hastalıkları alanında yüksek lisansımı tamamladım; kimseye tavsiye etmem, ama fırsat olsa yine yapardım. Oradan bir yenidoğan immünolojisi laboratuvarının yönetimine geçtim ve beni asıl saran soruyla tanıştım.", "Sorması kolay, yanıtlaması inatçı bir soruydu: yenidoğanlar immünolojik olarak neden bu kadar savunmasız? Bu soru, <a href=\"https://drexel.edu/medicine/about/departments/microbiology-immunology/research/the-carey-lab/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);\">Alison J. Carey, MD’nin laboratuvarında</a> yürüttüğüm doktora çalışmama dönüştü. Bu süreçte 2016 NIH Klinik ve Translasyonel Araştırma kohortuna seçildim; çalışma daha sonra Amedeo Bondi Araştırmada Mükemmellik Ödülü ile Dekanlık İşbirlikçi Araştırma Mükemmellik Ödülü’nü kazandı.", "Lisansüstü yıllarım bana bilimin bir takım işi olduğunu ve takımı ayakta tutan o pek parlak görünmeyen işi birilerinin üstlenmesi gerektiğini de öğretti. Biyomedikal Bilimler Lisansüstü Öğrenci Birliği başkanlığını yürüttüm, <span lang=\"en\">Drexel University</span> Lisansüstü Konseyi’nde yer aldım ve Tıp Fakültesi’nin Biyomedikal Bilimler Yürütme Kurulu’nda görev aldım — yani müfredatın, politikaların ve öğrenci yaşamının gerçekten karara bağlandığı odalarda. Laboratuvarda yüksek lisans öğrencilerini, yenidoğan uzmanlık öğrencilerini ve genç araştırmacıları eğittim. Yıllar sonra hâlâ en çok geri dönüş aldığım kısım bu.", "Doktora sonrası dönemimi bilinçli olarak seçtim. Hem uygulamalı translasyonel çalışma hem de düzenleyicilerin nasıl düşündüğünü yakından görmek istiyordum; FDA’nın <span lang=\"en\">Office of Vaccines Research and Review</span> birimi ikisini birden sunuyordu. Orada bir NIH işbirlikçi araştırma merkezi çatısı altında <em>Neisseria gonorrhoeae</em>’ye karşı lipozom ve dış membran vezikülü temelli aşı adayları geliştirdim — ve en az onun kadar değerlisi, preklinik kanıtın gerçekte nasıl değerlendirildiğini öğrendim: GLP standartları, protokol tasarımı ve kurumun aşı güvenliği ile immünojenisiteyi tartarken kullandığı çerçeve. Deneyinizi kimin okuyacağını tam olarak bildiğinizde onu tasarlama biçiminiz değişiyor.", "Bu yol beni <span lang=\"en\">National Academies of Sciences, Engineering, and Medicine</span>’e getirdi; burada CDC, VA, DoD ve FDA tarafından talep edilen yüksek etkili kanıt derlemelerine destek veriyorum — yoğun immünolojiyi, kamu yönetiminde çalışanların gerçekten uygulayabileceği önerilere dönüştürüyorum. Uç uca eklendiğinde ortaya aşı hattına dair alışılmadık ölçüde bütünlüklü bir görüş çıkıyor: temel keşiften aday formülasyonuna ve hayvan modellerine uzanan preklinik geliştirme, bu adayların nasıl değerlendirildiğini belirleyen düzenleyici bilim ve lisans sonrası gözetim — bir ürün insanların koluna girdikten sonra aşı güvenliğini izleyen büyük federal sistemler dahil.", "Çocukluğumdaki bir mikroskopla başlayan merak hâlâ motorun kendisi. Sorular sadece büyüdü — riskler de öyle."], ".timeline-place": ["<span lang=\"en\">National Academies</span> of Sciences, Engineering, and Medicine", "<span lang=\"en\">FDA Office of Vaccine Research</span> &amp; Review", "<span lang=\"en\">Drexel University College of Medicine</span>", "<span lang=\"en\">Drexel University</span>"], ".rc-inst": ["NASEM · Program Sorumlusu", "<span lang=\"en\">FDA Office of Vaccine Research</span> · Doktora Sonrası", "<span lang=\"en\">Drexel University College of Medicine</span> · Doktora", "<span lang=\"en\">Drexel University College of Medicine</span> · Doktora", "<span lang=\"en\">Drexel / Frontiers in Immunology</span> · Doktora", "<span lang=\"en\">Drexel University</span> · Yüksek Lisans"], ".rc-title": ["Aşı Güvenliği Kanıt Sentezi", "Gonore Aşısı Geliştirme", "Yenidoğan Bağışıklığının Probiyotiklerle Modülasyonu", "Yenidoğan CD8+ T Hücre Biyolojisi", "Prematüre Yenidoğanlarda T Hücre Repertuvarı", "Legionella Patogenezi"], ".rc-desc": ["CDC, VA, DoD ve FDA tarafından talep edilen, aşı güvenliğine ilişkin kapsamlı uzman uzlaşı çalışmalarını yürütür; karmaşık immünolojik kanıtları uygulanabilir ulusal politika önerilerine dönüştürür.", "FDA'nın düzenleyici bilim çerçevesi içinde <em>Neisseria gonorrhoeae</em>'ye karşı lipozom ve dış membran vezikülü temelli aşı adayları geliştirdi; fare çıkan enfeksiyon modellerinde uygulama yollarını ve immünojenisiteyi değerlendirdi.", "İntranazal <em>Lactobacillus rhamnosus</em> GG uygulamasının yenidoğanlardaki bağışıklık kusurlarını giderip gideremeyeceğini ve influenza enfeksiyonu sırasında erken viral kontrolü yeniden sağlayıp sağlayamayacağını araştırdı — <em>PLoS Pathogens</em>'ta yayımlandı.", "Yenidoğanlar viral enfeksiyonları neden kontrol edemiyor? Yenidoğan CD8+ T hücrelerindeki içsel kusurları — transkripsiyonel yeniden programlanmadan klonal dinamiklere kadar — fare ve insan modellerinde inceledi.", "Aşırı prematüre yenidoğanların naif CD8+ T hücre reseptörü repertuvarını karakterize ederek yakınsak rekombinasyonu ve ortak (public) klonotipleri gösterdi — prematüre bebeklerin neden daha yüksek enfeksiyon riski taşıdığına ışık tuttu.", "Dr. Shira Ninio'nun laboratuvarında <em>Legionella pneumophila</em>'nın virülans faktörlerini ve biyofilm oluşumunu inceledi; etkin hücre içi replikasyon için gerekli olan OmpA benzeri bir proteini karakterize etti."], ".policy-intro-text": ["<a href=\"https://www.nationalacademies.org\" target=\"_blank\" rel=\"noopener\"><span lang=\"en\">National Academies</span> of Sciences, Engineering, and Medicine</a> bünyesinde Program Sorumlusu olarak, <a href=\"https://www.nationalacademies.org/units/CHPP-CHPP%20EO-25-P-703\" target=\"_blank\" rel=\"noopener\">Center for Health, People, and Places (CHPP)</a> çatısı altındaki <a href=\"https://www.nationalacademies.org/units/CHPP-BHS-25-P-704\" target=\"_blank\" rel=\"noopener\">Biomedical and Health Sciences (BHS) Program Alanı</a>nda çalışıyorum. Burada immünoloji ve aşı bilimi alanındaki uzmanlığımı, aşı güvenliği, izleme sistemleri ile asker ve gazi sağlığı konularındaki uzman uzlaşı çalışmalarını desteklemek için kullanıyorum — bu çalışmalar CDC, VA, DoD ve FDA tarafından talep edilmektedir. Bu iş, bilimsel kanıt ile en üst düzeydeki halk sağlığı karar alma süreçleri arasında köprü kuruyor."], ".pc-title": ["Nörodejeneratif Sonuçlar ve Seçilmiş Askerî Maruziyetler", "SARS-CoV-2 Enfeksiyonunun Yaşam Boyu Doğrudan Nörobilişsel Etkileri", "Vaccine Risk Monitoring and Evaluation at the Centers for Disease Control and Prevention", "Evidence Review of the Adverse Effects of COVID-19 Vaccination and Intramuscular Vaccine Administration"], ".pc-desc": ["Bir National Academies komitesi, altı askerî hizmet maruziyet kategorisi — pestisitler, jet yakıtları, çözücüler, ağır metaller, per- ve polifloroalkil maddeler (PFAS) ve ince partikül madde (PM<sub>2.5</sub>) — ile sekiz nörodejeneratif hastalık arasındaki ilişkilere dair kanıt tabanının gücünü belirlemek üzere mevcut sistematik derlemelerin derlemesini yürütüyor. Her maruziyet türü ve alt kategorileri, sekiz sonucun her biri için ayrı ayrı inceleniyor. Komite yeni sistematik derlemeler ya da bireysel düzeyde veri analizleri yapmıyor; bunun yerine gelecekte hangi birincil çalışmalara veya sistematik derlemelere ihtiyaç duyulduğunu önerecek.", "National Academies bünyesindeki bir ad hoc komite, SARS-CoV-2 enfeksiyonunun nörobilişsel işlev üzerindeki doğrudan etkilerine ilişkin bilimsel kanıtların durumunu yaşam boyu — çocuklar, ergenler, çalışma çağındaki yetişkinler ve ileri yaştakiler — inceliyor. Komite ayrıca askerî hazırlık, asker ve gazi sağlığı ile sağlık sistemi planlaması açısından doğurduğu sonuçları da değerlendirecek.", "CDC'nin aşı güvenliği izleme sistemlerinin ve altyapısının derinlemesine değerlendirilmesi; mevcut uygulamaları inceleyerek ulusal aşı risk gözetimini güçlendirmeye yönelik öneriler sunar.", "COVID-19 aşıları ve kas içi aşı uygulamasıyla ilişkili advers etkileri inceleyen kapsamlı bir kanıt derlemesi; federal sağlık kurumları için aşı güvenliği politikasına yön vermek üzere hazırlanmıştır."], ".briefing-text": ["<em>Vaccine Risk Monitoring and Evaluation at the Centers for Disease Control and Prevention</em> raporu üzerine, ABD Temsilciler Meclisi ve Senato Ödenek Komiteleri ile Senato HELP Komitesi personeline yönelik davetli bir brifing hazırladı.", "<em>COVID-19 aşı güvenliği</em> üzerine, ABD Temsilciler Meclisi ve Senato Ödenek Komiteleri ile Senato HELP Komitesi personeline yönelik davetli bir brifing hazırladı."], "#teaching .teaching-grid > div:first-child > p": ["Öğretmenlik, resmen öğretmen olmamdan çok önce hayatımın bir parçasıydı. Philadelphia'daki Franklin Institute'a lise yıllarımda gönüllü olarak girdim ve yirmi yılı aşkın süre kaldım. Oradaki hemen her işi yaptım: halka açık canlı bilim gösterileri ve deneyler, okul gruplarına özel atölyeler ve sonunda gece yatılı kamp programı &mdash; önce yönettim, ardından bir sezon boyunca direktörlüğünü üstlendim; karanlıktan sonra bir müzenin içinde yüzlerce çocuğu ve onların epey yorgun sorumlularını yönlendirdim. İsteyebileceğim en iyi yaygın eğitim okuluydu. Bir salonu okumayı, bir açıklamanın altı yaşındakine ulaşan hâliyle onun şüpheci ebeveynine ulaşan hâlini bulmayı ve bilimi kişinin zaten önemsediği bir şeye bağlayamazsanız aklında kalmayacağını çabuk öğreniyorsunuz. Hâlâ böyle ders veriyorum.", "Bilimi ezberlenecek bir bilgi yığını olarak değil, bir keşif süreci olarak öğretiyorum. Sınıfımda öğrencilerin yalnızca <em>ne</em> olduğunu değil, <em>neden</em> olduğunu ve bunu kendi başlarına nasıl çözebileceklerini anlamalarını istiyorum. Yönlendirilmiş tartışma, Sokratik sorgulama, işbirlikçi etkinlikler ve gerçek yaşamdan vaka çalışmalarına dayanıyorum. Ayrıca derslerimi bilinçli olarak tek bir ders kitabına bağlamıyorum; bunun yerine birincil literatürden, vaka çalışmalarından ve açık eğitim kaynaklarından yararlanıyorum. Z-course ve OER gibi sıfır maliyetli ders girişimleri yaygınlaştıkça, ders kitabı engelini kaldırmanın öğretim üyelerinin eğitimde eşit erişimi desteklemek için atabileceği en pratik adımlardan biri olduğuna inanıyorum.", "Öğrettiğim kitle çok geniş bir yelpazeye yayıldı: yıllar sonra okula dönen meslek yüksek okulu öğrencileri, sağlık mesleklerine hazırlanan lisans öğrencileri, lisansüstü ve tıp öğrencileri, doktora sonrası araştırmacılar ve neonatoloji yandal öğrencileri. Rowan College at Burlington County'de sağlık meslekleri öğrencileri için Sağlık ve İnsan Mikrobiyolojisi dersini yürütüyor, ayrıca Biyoloji I, Biyoloji II ve Temel Mikrobiyoloji dersleri veriyorum. <span lang=\"en\">Drexel University College of Medicine</span> ve Uniformed Services University'de mikrobiyoloji, immünoloji, moleküler patogenez ve aşı geliştirme konularında ders anlatıyorum.", "İyi öğretmenlik, konuyu derinliğini yitirene kadar basitleştirmek değildir. Konuyu açıklıkla, düzenle ve bağlamla sunmak — ve öğrencilerin zorlu fikirlerle aktif biçimde uğraşacak kadar desteklendiklerini hissetmelerini sağlamaktır."], "#teaching h3": ["Öğretim ve Mentorluk"], "#teaching .teaching-grid > div:last-child > div > div > div": ["Mikrobiyoloji, İmmünoloji ve Aşı Geliştirme", "<span lang=\"en\">Drexel University College of Medicine</span> &amp; Uniformed Services University", "Sağlık ve İnsan Mikrobiyolojisi · Biyoloji I &amp; II · Temel Mikrobiyoloji", "Rowan College at Burlington County", "Öğretim Görevlisi ve Müfredat Tasarımcısı", "Philadelphia University", "Bilim Eğitmeni ve Program Geliştirici", "The Franklin Institute, Philadelphia", "Öğretim Asistanı", "University of the Sciences in Philadelphia", "Lisansüstü Öğrenci Derneği Başkanı", "<span lang=\"en\">Drexel University College of Medicine</span> (2 yıl)"], ".cv-desc": ["Tam akademik özgeçmişim ile akademi, kamu ve özel sektör pozisyonlarına yönelik hedefli özgeçmişlerime aşağıdan ulaşabilirsiniz."], ".contact-intro": ["Meslektaşlarımla, olası iş birlikçilerle ve aşı bilimi, immünoloji ya da bilim politikasına ilgi duyan herkesle tanışmaktan her zaman memnuniyet duyarım. İş birliği, ortak ilgi alanları ve yeni yönelimler üzerine konuşmaya açığım."], "#cf2-submit": ["Mesaj Gönder"], "#cf2-success": ["Ulaştığınız için teşekkürler — en kısa sürede size döneceğim."], "#rm-pubs-label": ["Öne Çıkan Yayınlar"], "footer span:first-child": ["© 2025 Dr. Ogan K. Kumova"]};
+var I18N_PHRASES = {"Clear filter": "Filtreyi temizle", "FDA": "FDA", "About": "Hakkımda", "Research": "Araştırma", "Policy": "Politika", "Teaching": "Öğretim", "Publications": "Yayınlar", "CV": "Özgeçmiş", "Contact": "İletişim", "Vaccine Science": "Aşı Bilimi", "Immunology": "İmmünoloji", "Science Policy": "Bilim Politikası", "Explore Research": "Araştırmaları İncele", "Get in Touch": "İletişime Geç", "Peer-Reviewed Publications": "Hakemli Yayın", "Years Translational Research": "Yıllık Translasyonel Araştırma", "Congressional Briefings": "Kongre Brifingi", "Background": "Geçmiş", "Science": "Bilim", "National Academies": "<span lang=\"en\">National Academies</span>", "Education": "Eğitim", "Peer-Reviewed Work": "Hakemli Çalışmalar", "Documents": "Belgeler", "About Me": "Hakkımda", "Policy Work": "Politika Çalışmaları", "Curriculum Vitae": "Özgeçmiş", "2023 – Present": "2023 – Günümüz", "2020 – 2023": "2020 – 2023", "2015 – 2020": "2015 – 2020", "2013 – 2015": "2013 – 2015", "Program Officer": "Program Sorumlusu", "Postdoctoral Fellow": "Doktora Sonrası Araştırmacı", "PhD — Immunology & Microbiology": "Doktora — İmmünoloji ve Mikrobiyoloji", "MS — Microbiology & Immunology": "Yüksek Lisans — Mikrobiyoloji ve İmmünoloji", "+ Expand": "+ Detay", "Research Profiles": "Araştırma Profilleri", "Current & Ongoing Projects": "Devam Eden Projeler", "Published Reports": "Yayımlanan Raporlar", "Congressional Briefings ": "Kongre Brifingleri", "View Project →": "Projeyi Görüntüle →", "View Report →": "Raporu Görüntüle →", "Interactive: COVID-19 Vaccine Adverse Effects →": "İnteraktif: COVID-19 Aşısının Advers Etkileri →", "Interactive: Shoulder Injuries →": "İnteraktif: Omuz Yaralanmaları →", "October 2025": "Ekim 2025", "May 2024": "Mayıs 2024", "VA · DoD": "VA · DoD", "DoD": "DoD", "2025 · CDC": "2025 · CDC", "2024 · FDA": "2024 · FDA", "Respiratory Immunology": "Solunum İmmünolojisi", "Vaccinology": "Vaksinoloji", "Infectious Disease": "Enfeksiyon Hastalıkları", "CD8+ T Cells": "CD8+ T Hücreleri", "Vaccine Safety": "Aşı Güvenliği", "Mucosal Immunity": "Mukozal Bağışıklık", "Adaptive Immunity": "Adaptif Bağışıklık", "Adjuvants": "Adjuvanlar", "Antimicrobial Peptides": "Antimikrobiyal Peptitler", "Biofilm": "Biyofilm", "Bronchopulmonary Dysplasia": "Bronkopulmoner Displazi", "CDC": "CDC", "Gonorrhea": "Gonore", "HIV": "HIV", "Influenza": "İnfluenza", "Innate Immunity": "Doğal Bağışıklık", "Legionella": "Legionella", "Neonatal Disease": "Yenidoğan Hastalıkları", "Neonatal Immunity": "Yenidoğan Bağışıklığı", "Pathogenesis": "Patogenez", "Preterm": "Prematürite", "Probiotics": "Probiyotikler", "Pulmonary Health": "Akciğer Sağlığı", "Stem Cells": "Kök Hücreler", "T Cell Development": "T Hücre Gelişimi", "TCR Repertoire": "TCR Repertuvarı", "Type I Interferon": "Tip I İnterferon", "Full CV": "Tam Özgeçmiş", "Academic": "Akademik", "Research Resume": "Araştırma Özgeçmişi", "Bench & Translational": "Laboratuvar ve Translasyonel", "Science Policy Resume": "Bilim Politikası Özgeçmişi", "Policy & Federal": "Politika ve Federal", "Teaching Resume": "Öğretim Özgeçmişi", "Education Roles": "Eğitim Görevleri", "ORCID Profile": "ORCID Profili", "Skip to content": "\u0130\u00e7eri\u011fe ge\u00e7"};
 var I18N_PHRASE_SEL = ".skip-link, .nav-links a, .hero-tag, .hero-btns a, .stat-label, .section-label, .section-title, .timeline-year, .timeline-role, .rc-link-hint, .rp-label, .policy-sublabel, .pc-sponsor, .pc-link, .briefing-date, .pub-theme, .pub-item span, .cv-btn strong, .cv-btn small";
 var I18N_PHRASES_N = (function(){ var o={}; Object.keys(I18N_PHRASES).forEach(function(k){ o[k.replace(/\s+/g,' ').trim()] = I18N_PHRASES[k]; }); return o; })();
 var I18N_PLACEHOLDERS = {"Your Name": "Adınız", "Your Email": "E-posta Adresiniz", "Your Message": "Mesajınız"};
@@ -2119,6 +2192,86 @@ function setLang(lang) {
   } catch (e) {}
   window.__lang = 'en';
   if (want === 'tr') setLang('tr'); else setLang('en');
+})();
+</script>
+
+
+<script>
+(function () {
+  var wrap = document.querySelector('.pub-themes');
+  var list = document.querySelector('.pub-list');
+  if (!wrap || !list) return;
+  var btns = Array.prototype.slice.call(wrap.querySelectorAll('.pub-theme[data-th]'));
+  var clear = wrap.querySelector('.pub-theme-clear');
+  var status = wrap.querySelector('.pub-filter-status');
+  var items = Array.prototype.slice.call(list.querySelectorAll('.pub-item'));
+  var active = null;
+
+  function apply() {
+    if (!active) {
+      list.classList.remove('is-filtering');
+      items.forEach(function (it) { it.classList.remove('pub-hit', 'pub-dim'); });
+      if (clear) clear.hidden = true;
+      if (status) status.textContent = 'Filter cleared. Showing all publications.';
+      return;
+    }
+    var n = 0;
+    list.classList.add('is-filtering');
+    items.forEach(function (it) {
+      var th = (it.getAttribute('data-th') || '').split(' ');
+      var hit = th.indexOf(active) !== -1;
+      it.classList.toggle('pub-hit', hit);
+      it.classList.toggle('pub-dim', !hit);
+      if (hit) n++;
+    });
+    if (clear) clear.hidden = false;
+    var label = '';
+    btns.forEach(function (b) { if (b.getAttribute('data-th') === active) label = b.textContent; });
+    if (status) status.textContent = n + ' publication' + (n === 1 ? '' : 's') + ' matching ' + label + '.';
+  }
+
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var th = b.getAttribute('data-th');
+      active = (active === th) ? null : th;
+      btns.forEach(function (x) {
+        x.setAttribute('aria-pressed', String(x.getAttribute('data-th') === active));
+      });
+      apply();
+    });
+  });
+  if (clear) clear.addEventListener('click', function () {
+    active = null;
+    btns.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
+    apply();
+  });
+})();
+</script>
+
+
+<script>
+(function () {
+  var heads = Array.prototype.slice.call(document.querySelectorAll('.sec-head'));
+  if (!heads.length) return;
+  var NAV = 68, BAND = 52, ticking = false;
+  function update() {
+    ticking = false;
+    if (window.innerWidth <= 768) {
+      heads.forEach(function (h) { h.classList.remove('is-stuck'); });
+      return;
+    }
+    heads.forEach(function (h) {
+      var sec = h.parentElement;
+      var r = sec.getBoundingClientRect();
+      h.classList.toggle('is-stuck', r.top <= 4 && r.bottom > NAV + BAND);
+    });
+  }
+  function onScroll() {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  update();
 })();
 </script>
 
